@@ -88,3 +88,16 @@ Start the server
 ```bash
   uvicorn main:app --host 0.0.0.0 --port 8000
 ```
+
+
+## Run with Docker Compose
+
+Install dependencies
+
+```bash
+  docker-compose up
+```
+
+## Front End Chatbot
+
+![Alt text](img/Insurance_chatbot.png)
