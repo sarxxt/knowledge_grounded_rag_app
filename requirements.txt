@@ -1,0 +1,16 @@
+langchain==0.0.339
+unstructured==0.10.30
+unstructured-inference==0.7.11
+unstructured.pytesseract==0.3.12
+Pillow==9.5.0
+sentence-transformers==2.2.2
+uvicorn==0.23.2
+python-multipart==0.0.6
+openai==0.28.1
+python-dotenv==1.0.0
+python-multipart==0.0.6
+fastapi==0.104.0
+qdrant-client==1.6.4
+tiktoken
+pytesseract==0.3.10
+

@@ -1,0 +1,21 @@
+version: '3'
+services:
+  rag-backend-image:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    env_file:
+      - .env
+    ports:
+      - 8000:8000
+
+  rag-frontend-image:
+    build:
+      context: ./streamlit_frontend
+      dockerfile: Dockerfile
+    env_file:
+      - .env
+    ports:
+      - 8501:8501
+    depends_on:
+      - rag-backend-image
