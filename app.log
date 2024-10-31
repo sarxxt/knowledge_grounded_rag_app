@@ -1,0 +1,2214 @@
+2024-10-23 05:12:11,335 - ERROR - Form data requires "python-multipart" to be installed. 
+You can install "python-multipart" with: 
+
+pip install python-multipart
+
+2024-10-23 05:12:58,662 - ERROR - Form data requires "python-multipart" to be installed. 
+You can install "python-multipart" with: 
+
+pip install python-multipart
+
+2024-10-23 05:14:41,056 - ERROR - Form data requires "python-multipart" to be installed. 
+You can install "python-multipart" with: 
+
+pip install python-multipart
+
+2024-10-23 05:17:53,960 - ERROR - Form data requires "python-multipart" to be installed. 
+You can install "python-multipart" with: 
+
+pip install python-multipart
+
+2024-10-23 05:20:45,579 - INFO - Generating Documents
+2024-10-23 05:20:47,516 - ERROR - Error while Generating Documents: No module named 'pi_heif' trace_back:Traceback (most recent call last):
+  File "/Users/dev/Documents/integrity_chatbot/utils/document_generation.py", line 89, in generate_documents
+    pdf_text_documents = pdf_loader.load()
+                         ^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/langchain_core/document_loaders/base.py", line 31, in load
+    return list(self.lazy_load())
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/langchain_community/document_loaders/unstructured.py", line 107, in lazy_load
+    elements = self._get_elements()
+               ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/langchain_community/document_loaders/pdf.py", line 72, in _get_elements
+    from unstructured.partition.pdf import partition_pdf
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/partition/pdf.py", line 18, in <module>
+    from pi_heif import register_heif_opener
+ModuleNotFoundError: No module named 'pi_heif'
+
+2024-10-23 05:20:47,522 - ERROR - Error occurred during processing: Error: No module named 'pi_heif', traceback: Traceback (most recent call last):
+  File "/Users/dev/Documents/integrity_chatbot/utils/document_generation.py", line 89, in generate_documents
+    pdf_text_documents = pdf_loader.load()
+                         ^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/langchain_core/document_loaders/base.py", line 31, in load
+    return list(self.lazy_load())
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/langchain_community/document_loaders/unstructured.py", line 107, in lazy_load
+    elements = self._get_elements()
+               ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/langchain_community/document_loaders/pdf.py", line 72, in _get_elements
+    from unstructured.partition.pdf import partition_pdf
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/partition/pdf.py", line 18, in <module>
+    from pi_heif import register_heif_opener
+ModuleNotFoundError: No module named 'pi_heif'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dev/Documents/integrity_chatbot/main.py", line 66, in upload_pdf_endpoint
+    docs = document_generator.generate_documents(file=str(temp_file.name), file_name=file_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/utils/document_generation.py", line 99, in generate_documents
+    raise Exception (f"Error: {e}")
+Exception: Error: No module named 'pi_heif'
+
+2024-10-23 05:25:28,807 - INFO - Generating Documents
+2024-10-23 05:27:10,132 - WARNING - Matplotlib is building the font cache; this may take a moment.
+2024-10-23 05:27:17,446 - INFO - Failed to extract font properties from /System/Library/Fonts/LastResort.otf: tuple indices must be integers or slices, not str
+2024-10-23 05:27:17,455 - INFO - Failed to extract font properties from /System/Library/Fonts/Supplemental/NISC18030.ttf: In FT2Font: Could not set the fontsize (invalid pixel size; error code 0x17)
+2024-10-23 05:27:17,652 - INFO - Failed to extract font properties from /System/Library/Fonts/Apple Color Emoji.ttc: In FT2Font: Could not set the fontsize (invalid pixel size; error code 0x17)
+2024-10-23 05:27:17,741 - INFO - generated new fontManager
+2024-10-23 05:28:17,156 - INFO - PDF text extraction failed, skip text extraction...
+2024-10-23 05:28:20,208 - ERROR - Error while Generating Documents: Unable to get page count. Is poppler installed and in PATH? trace_back:Traceback (most recent call last):
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/pdf2image/pdf2image.py", line 581, in pdfinfo_from_path
+    proc = Popen(command, env=env, stdout=PIPE, stderr=PIPE)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/subprocess.py", line 1026, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/subprocess.py", line 1955, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'pdfinfo'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dev/Documents/integrity_chatbot/utils/document_generation.py", line 89, in generate_documents
+    pdf_text_documents = pdf_loader.load()
+                         ^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/langchain_core/document_loaders/base.py", line 31, in load
+    return list(self.lazy_load())
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/langchain_community/document_loaders/unstructured.py", line 107, in lazy_load
+    elements = self._get_elements()
+               ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/langchain_community/document_loaders/pdf.py", line 74, in _get_elements
+    return partition_pdf(filename=self.file_path, **self.unstructured_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/documents/elements.py", line 578, in wrapper
+    elements = func(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/file_utils/filetype.py", line 725, in wrapper
+    elements = func(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/file_utils/filetype.py", line 683, in wrapper
+    elements = func(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/chunking/dispatch.py", line 74, in wrapper
+    elements = func(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/partition/pdf.py", line 200, in partition_pdf
+    return partition_pdf_or_image(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/partition/pdf.py", line 330, in partition_pdf_or_image
+    elements = _partition_pdf_or_image_with_ocr(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/partition/pdf.py", line 871, in _partition_pdf_or_image_with_ocr
+    for page_number, image in enumerate(
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/partition/pdf_image/pdf_image_utils.py", line 400, in convert_pdf_to_images
+    info = pdf2image.pdfinfo_from_path(filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/pdf2image/pdf2image.py", line 607, in pdfinfo_from_path
+    raise PDFInfoNotInstalledError(
+pdf2image.exceptions.PDFInfoNotInstalledError: Unable to get page count. Is poppler installed and in PATH?
+
+2024-10-23 05:28:20,213 - ERROR - Error occurred during processing: Error: Unable to get page count. Is poppler installed and in PATH?, traceback: Traceback (most recent call last):
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/pdf2image/pdf2image.py", line 581, in pdfinfo_from_path
+    proc = Popen(command, env=env, stdout=PIPE, stderr=PIPE)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/subprocess.py", line 1026, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/subprocess.py", line 1955, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'pdfinfo'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dev/Documents/integrity_chatbot/utils/document_generation.py", line 89, in generate_documents
+    pdf_text_documents = pdf_loader.load()
+                         ^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/langchain_core/document_loaders/base.py", line 31, in load
+    return list(self.lazy_load())
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/langchain_community/document_loaders/unstructured.py", line 107, in lazy_load
+    elements = self._get_elements()
+               ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/langchain_community/document_loaders/pdf.py", line 74, in _get_elements
+    return partition_pdf(filename=self.file_path, **self.unstructured_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/documents/elements.py", line 578, in wrapper
+    elements = func(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/file_utils/filetype.py", line 725, in wrapper
+    elements = func(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/file_utils/filetype.py", line 683, in wrapper
+    elements = func(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/chunking/dispatch.py", line 74, in wrapper
+    elements = func(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/partition/pdf.py", line 200, in partition_pdf
+    return partition_pdf_or_image(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/partition/pdf.py", line 330, in partition_pdf_or_image
+    elements = _partition_pdf_or_image_with_ocr(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/partition/pdf.py", line 871, in _partition_pdf_or_image_with_ocr
+    for page_number, image in enumerate(
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/partition/pdf_image/pdf_image_utils.py", line 400, in convert_pdf_to_images
+    info = pdf2image.pdfinfo_from_path(filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/pdf2image/pdf2image.py", line 607, in pdfinfo_from_path
+    raise PDFInfoNotInstalledError(
+pdf2image.exceptions.PDFInfoNotInstalledError: Unable to get page count. Is poppler installed and in PATH?
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dev/Documents/integrity_chatbot/main.py", line 66, in upload_pdf_endpoint
+    docs = document_generator.generate_documents(file=str(temp_file.name), file_name=file_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/utils/document_generation.py", line 99, in generate_documents
+    raise Exception (f"Error: {e}")
+Exception: Error: Unable to get page count. Is poppler installed and in PATH?
+
+2024-10-23 05:32:03,627 - INFO - Generating Documents
+2024-10-23 05:32:11,552 - INFO - PDF text extraction failed, skip text extraction...
+2024-10-23 05:32:11,593 - ERROR - Error while Generating Documents: Unable to get page count. Is poppler installed and in PATH? trace_back:Traceback (most recent call last):
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/pdf2image/pdf2image.py", line 581, in pdfinfo_from_path
+    proc = Popen(command, env=env, stdout=PIPE, stderr=PIPE)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/subprocess.py", line 1026, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/subprocess.py", line 1955, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'pdfinfo'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dev/Documents/integrity_chatbot/utils/document_generation.py", line 89, in generate_documents
+    pdf_text_documents = pdf_loader.load()
+                         ^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/langchain_core/document_loaders/base.py", line 31, in load
+    return list(self.lazy_load())
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/langchain_community/document_loaders/unstructured.py", line 107, in lazy_load
+    elements = self._get_elements()
+               ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/langchain_community/document_loaders/pdf.py", line 74, in _get_elements
+    return partition_pdf(filename=self.file_path, **self.unstructured_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/documents/elements.py", line 578, in wrapper
+    elements = func(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/file_utils/filetype.py", line 725, in wrapper
+    elements = func(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/file_utils/filetype.py", line 683, in wrapper
+    elements = func(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/chunking/dispatch.py", line 74, in wrapper
+    elements = func(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/partition/pdf.py", line 200, in partition_pdf
+    return partition_pdf_or_image(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/partition/pdf.py", line 330, in partition_pdf_or_image
+    elements = _partition_pdf_or_image_with_ocr(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/partition/pdf.py", line 871, in _partition_pdf_or_image_with_ocr
+    for page_number, image in enumerate(
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/partition/pdf_image/pdf_image_utils.py", line 400, in convert_pdf_to_images
+    info = pdf2image.pdfinfo_from_path(filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/pdf2image/pdf2image.py", line 607, in pdfinfo_from_path
+    raise PDFInfoNotInstalledError(
+pdf2image.exceptions.PDFInfoNotInstalledError: Unable to get page count. Is poppler installed and in PATH?
+
+2024-10-23 05:32:11,597 - ERROR - Error occurred during processing: Error: Unable to get page count. Is poppler installed and in PATH?, traceback: Traceback (most recent call last):
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/pdf2image/pdf2image.py", line 581, in pdfinfo_from_path
+    proc = Popen(command, env=env, stdout=PIPE, stderr=PIPE)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/subprocess.py", line 1026, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/subprocess.py", line 1955, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'pdfinfo'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dev/Documents/integrity_chatbot/utils/document_generation.py", line 89, in generate_documents
+    pdf_text_documents = pdf_loader.load()
+                         ^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/langchain_core/document_loaders/base.py", line 31, in load
+    return list(self.lazy_load())
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/langchain_community/document_loaders/unstructured.py", line 107, in lazy_load
+    elements = self._get_elements()
+               ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/langchain_community/document_loaders/pdf.py", line 74, in _get_elements
+    return partition_pdf(filename=self.file_path, **self.unstructured_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/documents/elements.py", line 578, in wrapper
+    elements = func(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/file_utils/filetype.py", line 725, in wrapper
+    elements = func(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/file_utils/filetype.py", line 683, in wrapper
+    elements = func(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/chunking/dispatch.py", line 74, in wrapper
+    elements = func(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/partition/pdf.py", line 200, in partition_pdf
+    return partition_pdf_or_image(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/partition/pdf.py", line 330, in partition_pdf_or_image
+    elements = _partition_pdf_or_image_with_ocr(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/partition/pdf.py", line 871, in _partition_pdf_or_image_with_ocr
+    for page_number, image in enumerate(
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/partition/pdf_image/pdf_image_utils.py", line 400, in convert_pdf_to_images
+    info = pdf2image.pdfinfo_from_path(filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/pdf2image/pdf2image.py", line 607, in pdfinfo_from_path
+    raise PDFInfoNotInstalledError(
+pdf2image.exceptions.PDFInfoNotInstalledError: Unable to get page count. Is poppler installed and in PATH?
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dev/Documents/integrity_chatbot/main.py", line 66, in upload_pdf_endpoint
+    docs = document_generator.generate_documents(file=str(temp_file.name), file_name=file_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/utils/document_generation.py", line 99, in generate_documents
+    raise Exception (f"Error: {e}")
+Exception: Error: Unable to get page count. Is poppler installed and in PATH?
+
+2024-10-23 05:33:20,901 - INFO - Generating Documents
+2024-10-23 05:33:20,903 - INFO - PDF text extraction failed, skip text extraction...
+2024-10-23 05:33:20,926 - ERROR - Error while Generating Documents: Unable to get page count. Is poppler installed and in PATH? trace_back:Traceback (most recent call last):
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/pdf2image/pdf2image.py", line 581, in pdfinfo_from_path
+    proc = Popen(command, env=env, stdout=PIPE, stderr=PIPE)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/subprocess.py", line 1026, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/subprocess.py", line 1955, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'pdfinfo'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dev/Documents/integrity_chatbot/utils/document_generation.py", line 89, in generate_documents
+    pdf_text_documents = pdf_loader.load()
+                         ^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/langchain_core/document_loaders/base.py", line 31, in load
+    return list(self.lazy_load())
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/langchain_community/document_loaders/unstructured.py", line 107, in lazy_load
+    elements = self._get_elements()
+               ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/langchain_community/document_loaders/pdf.py", line 74, in _get_elements
+    return partition_pdf(filename=self.file_path, **self.unstructured_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/documents/elements.py", line 578, in wrapper
+    elements = func(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/file_utils/filetype.py", line 725, in wrapper
+    elements = func(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/file_utils/filetype.py", line 683, in wrapper
+    elements = func(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/chunking/dispatch.py", line 74, in wrapper
+    elements = func(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/partition/pdf.py", line 200, in partition_pdf
+    return partition_pdf_or_image(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/partition/pdf.py", line 330, in partition_pdf_or_image
+    elements = _partition_pdf_or_image_with_ocr(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/partition/pdf.py", line 871, in _partition_pdf_or_image_with_ocr
+    for page_number, image in enumerate(
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/partition/pdf_image/pdf_image_utils.py", line 400, in convert_pdf_to_images
+    info = pdf2image.pdfinfo_from_path(filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/pdf2image/pdf2image.py", line 607, in pdfinfo_from_path
+    raise PDFInfoNotInstalledError(
+pdf2image.exceptions.PDFInfoNotInstalledError: Unable to get page count. Is poppler installed and in PATH?
+
+2024-10-23 05:33:20,931 - ERROR - Error occurred during processing: Error: Unable to get page count. Is poppler installed and in PATH?, traceback: Traceback (most recent call last):
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/pdf2image/pdf2image.py", line 581, in pdfinfo_from_path
+    proc = Popen(command, env=env, stdout=PIPE, stderr=PIPE)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/subprocess.py", line 1026, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/subprocess.py", line 1955, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'pdfinfo'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dev/Documents/integrity_chatbot/utils/document_generation.py", line 89, in generate_documents
+    pdf_text_documents = pdf_loader.load()
+                         ^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/langchain_core/document_loaders/base.py", line 31, in load
+    return list(self.lazy_load())
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/langchain_community/document_loaders/unstructured.py", line 107, in lazy_load
+    elements = self._get_elements()
+               ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/langchain_community/document_loaders/pdf.py", line 74, in _get_elements
+    return partition_pdf(filename=self.file_path, **self.unstructured_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/documents/elements.py", line 578, in wrapper
+    elements = func(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/file_utils/filetype.py", line 725, in wrapper
+    elements = func(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/file_utils/filetype.py", line 683, in wrapper
+    elements = func(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/chunking/dispatch.py", line 74, in wrapper
+    elements = func(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/partition/pdf.py", line 200, in partition_pdf
+    return partition_pdf_or_image(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/partition/pdf.py", line 330, in partition_pdf_or_image
+    elements = _partition_pdf_or_image_with_ocr(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/partition/pdf.py", line 871, in _partition_pdf_or_image_with_ocr
+    for page_number, image in enumerate(
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/partition/pdf_image/pdf_image_utils.py", line 400, in convert_pdf_to_images
+    info = pdf2image.pdfinfo_from_path(filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/pdf2image/pdf2image.py", line 607, in pdfinfo_from_path
+    raise PDFInfoNotInstalledError(
+pdf2image.exceptions.PDFInfoNotInstalledError: Unable to get page count. Is poppler installed and in PATH?
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dev/Documents/integrity_chatbot/main.py", line 66, in upload_pdf_endpoint
+    docs = document_generator.generate_documents(file=str(temp_file.name), file_name=file_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/utils/document_generation.py", line 99, in generate_documents
+    raise Exception (f"Error: {e}")
+Exception: Error: Unable to get page count. Is poppler installed and in PATH?
+
+2024-10-23 05:33:28,017 - INFO - Generating Documents
+2024-10-23 05:33:28,019 - INFO - PDF text extraction failed, skip text extraction...
+2024-10-23 05:33:28,041 - ERROR - Error while Generating Documents: Unable to get page count. Is poppler installed and in PATH? trace_back:Traceback (most recent call last):
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/pdf2image/pdf2image.py", line 581, in pdfinfo_from_path
+    proc = Popen(command, env=env, stdout=PIPE, stderr=PIPE)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/subprocess.py", line 1026, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/subprocess.py", line 1955, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'pdfinfo'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dev/Documents/integrity_chatbot/utils/document_generation.py", line 89, in generate_documents
+    pdf_text_documents = pdf_loader.load()
+                         ^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/langchain_core/document_loaders/base.py", line 31, in load
+    return list(self.lazy_load())
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/langchain_community/document_loaders/unstructured.py", line 107, in lazy_load
+    elements = self._get_elements()
+               ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/langchain_community/document_loaders/pdf.py", line 74, in _get_elements
+    return partition_pdf(filename=self.file_path, **self.unstructured_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/documents/elements.py", line 578, in wrapper
+    elements = func(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/file_utils/filetype.py", line 725, in wrapper
+    elements = func(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/file_utils/filetype.py", line 683, in wrapper
+    elements = func(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/chunking/dispatch.py", line 74, in wrapper
+    elements = func(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/partition/pdf.py", line 200, in partition_pdf
+    return partition_pdf_or_image(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/partition/pdf.py", line 330, in partition_pdf_or_image
+    elements = _partition_pdf_or_image_with_ocr(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/partition/pdf.py", line 871, in _partition_pdf_or_image_with_ocr
+    for page_number, image in enumerate(
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/partition/pdf_image/pdf_image_utils.py", line 400, in convert_pdf_to_images
+    info = pdf2image.pdfinfo_from_path(filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/pdf2image/pdf2image.py", line 607, in pdfinfo_from_path
+    raise PDFInfoNotInstalledError(
+pdf2image.exceptions.PDFInfoNotInstalledError: Unable to get page count. Is poppler installed and in PATH?
+
+2024-10-23 05:33:28,046 - ERROR - Error occurred during processing: Error: Unable to get page count. Is poppler installed and in PATH?, traceback: Traceback (most recent call last):
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/pdf2image/pdf2image.py", line 581, in pdfinfo_from_path
+    proc = Popen(command, env=env, stdout=PIPE, stderr=PIPE)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/subprocess.py", line 1026, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/subprocess.py", line 1955, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'pdfinfo'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dev/Documents/integrity_chatbot/utils/document_generation.py", line 89, in generate_documents
+    pdf_text_documents = pdf_loader.load()
+                         ^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/langchain_core/document_loaders/base.py", line 31, in load
+    return list(self.lazy_load())
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/langchain_community/document_loaders/unstructured.py", line 107, in lazy_load
+    elements = self._get_elements()
+               ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/langchain_community/document_loaders/pdf.py", line 74, in _get_elements
+    return partition_pdf(filename=self.file_path, **self.unstructured_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/documents/elements.py", line 578, in wrapper
+    elements = func(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/file_utils/filetype.py", line 725, in wrapper
+    elements = func(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/file_utils/filetype.py", line 683, in wrapper
+    elements = func(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/chunking/dispatch.py", line 74, in wrapper
+    elements = func(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/partition/pdf.py", line 200, in partition_pdf
+    return partition_pdf_or_image(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/partition/pdf.py", line 330, in partition_pdf_or_image
+    elements = _partition_pdf_or_image_with_ocr(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/partition/pdf.py", line 871, in _partition_pdf_or_image_with_ocr
+    for page_number, image in enumerate(
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/partition/pdf_image/pdf_image_utils.py", line 400, in convert_pdf_to_images
+    info = pdf2image.pdfinfo_from_path(filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/pdf2image/pdf2image.py", line 607, in pdfinfo_from_path
+    raise PDFInfoNotInstalledError(
+pdf2image.exceptions.PDFInfoNotInstalledError: Unable to get page count. Is poppler installed and in PATH?
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dev/Documents/integrity_chatbot/main.py", line 66, in upload_pdf_endpoint
+    docs = document_generator.generate_documents(file=str(temp_file.name), file_name=file_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/utils/document_generation.py", line 99, in generate_documents
+    raise Exception (f"Error: {e}")
+Exception: Error: Unable to get page count. Is poppler installed and in PATH?
+
+2024-10-23 05:33:57,506 - INFO - Generating Documents
+2024-10-23 05:33:57,508 - INFO - PDF text extraction failed, skip text extraction...
+2024-10-23 05:33:57,530 - ERROR - Error while Generating Documents: Unable to get page count. Is poppler installed and in PATH? trace_back:Traceback (most recent call last):
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/pdf2image/pdf2image.py", line 581, in pdfinfo_from_path
+    proc = Popen(command, env=env, stdout=PIPE, stderr=PIPE)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/subprocess.py", line 1026, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/subprocess.py", line 1955, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'pdfinfo'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dev/Documents/integrity_chatbot/utils/document_generation.py", line 89, in generate_documents
+    pdf_text_documents = pdf_loader.load()
+                         ^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/langchain_core/document_loaders/base.py", line 31, in load
+    return list(self.lazy_load())
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/langchain_community/document_loaders/unstructured.py", line 107, in lazy_load
+    elements = self._get_elements()
+               ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/langchain_community/document_loaders/pdf.py", line 74, in _get_elements
+    return partition_pdf(filename=self.file_path, **self.unstructured_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/documents/elements.py", line 578, in wrapper
+    elements = func(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/file_utils/filetype.py", line 725, in wrapper
+    elements = func(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/file_utils/filetype.py", line 683, in wrapper
+    elements = func(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/chunking/dispatch.py", line 74, in wrapper
+    elements = func(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/partition/pdf.py", line 200, in partition_pdf
+    return partition_pdf_or_image(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/partition/pdf.py", line 330, in partition_pdf_or_image
+    elements = _partition_pdf_or_image_with_ocr(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/partition/pdf.py", line 871, in _partition_pdf_or_image_with_ocr
+    for page_number, image in enumerate(
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/partition/pdf_image/pdf_image_utils.py", line 400, in convert_pdf_to_images
+    info = pdf2image.pdfinfo_from_path(filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/pdf2image/pdf2image.py", line 607, in pdfinfo_from_path
+    raise PDFInfoNotInstalledError(
+pdf2image.exceptions.PDFInfoNotInstalledError: Unable to get page count. Is poppler installed and in PATH?
+
+2024-10-23 05:33:57,534 - ERROR - Error occurred during processing: Error: Unable to get page count. Is poppler installed and in PATH?, traceback: Traceback (most recent call last):
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/pdf2image/pdf2image.py", line 581, in pdfinfo_from_path
+    proc = Popen(command, env=env, stdout=PIPE, stderr=PIPE)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/subprocess.py", line 1026, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/subprocess.py", line 1955, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'pdfinfo'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dev/Documents/integrity_chatbot/utils/document_generation.py", line 89, in generate_documents
+    pdf_text_documents = pdf_loader.load()
+                         ^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/langchain_core/document_loaders/base.py", line 31, in load
+    return list(self.lazy_load())
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/langchain_community/document_loaders/unstructured.py", line 107, in lazy_load
+    elements = self._get_elements()
+               ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/langchain_community/document_loaders/pdf.py", line 74, in _get_elements
+    return partition_pdf(filename=self.file_path, **self.unstructured_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/documents/elements.py", line 578, in wrapper
+    elements = func(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/file_utils/filetype.py", line 725, in wrapper
+    elements = func(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/file_utils/filetype.py", line 683, in wrapper
+    elements = func(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/chunking/dispatch.py", line 74, in wrapper
+    elements = func(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/partition/pdf.py", line 200, in partition_pdf
+    return partition_pdf_or_image(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/partition/pdf.py", line 330, in partition_pdf_or_image
+    elements = _partition_pdf_or_image_with_ocr(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/partition/pdf.py", line 871, in _partition_pdf_or_image_with_ocr
+    for page_number, image in enumerate(
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/partition/pdf_image/pdf_image_utils.py", line 400, in convert_pdf_to_images
+    info = pdf2image.pdfinfo_from_path(filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/pdf2image/pdf2image.py", line 607, in pdfinfo_from_path
+    raise PDFInfoNotInstalledError(
+pdf2image.exceptions.PDFInfoNotInstalledError: Unable to get page count. Is poppler installed and in PATH?
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dev/Documents/integrity_chatbot/main.py", line 66, in upload_pdf_endpoint
+    docs = document_generator.generate_documents(file=str(temp_file.name), file_name=file_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/utils/document_generation.py", line 99, in generate_documents
+    raise Exception (f"Error: {e}")
+Exception: Error: Unable to get page count. Is poppler installed and in PATH?
+
+2024-10-23 05:34:48,141 - INFO - Generating Documents
+2024-10-23 05:34:48,144 - INFO - PDF text extraction failed, skip text extraction...
+2024-10-23 05:34:51,168 - ERROR - Error while Generating Documents: Unable to get page count. Is poppler installed and in PATH? trace_back:Traceback (most recent call last):
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/pdf2image/pdf2image.py", line 581, in pdfinfo_from_path
+    proc = Popen(command, env=env, stdout=PIPE, stderr=PIPE)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/subprocess.py", line 1026, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/subprocess.py", line 1955, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'pdfinfo'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dev/Documents/integrity_chatbot/utils/document_generation.py", line 89, in generate_documents
+    pdf_text_documents = pdf_loader.load()
+                         ^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/langchain_core/document_loaders/base.py", line 31, in load
+    return list(self.lazy_load())
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/langchain_community/document_loaders/unstructured.py", line 107, in lazy_load
+    elements = self._get_elements()
+               ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/langchain_community/document_loaders/pdf.py", line 74, in _get_elements
+    return partition_pdf(filename=self.file_path, **self.unstructured_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/documents/elements.py", line 578, in wrapper
+    elements = func(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/file_utils/filetype.py", line 725, in wrapper
+    elements = func(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/file_utils/filetype.py", line 683, in wrapper
+    elements = func(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/chunking/dispatch.py", line 74, in wrapper
+    elements = func(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/partition/pdf.py", line 200, in partition_pdf
+    return partition_pdf_or_image(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/partition/pdf.py", line 330, in partition_pdf_or_image
+    elements = _partition_pdf_or_image_with_ocr(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/partition/pdf.py", line 871, in _partition_pdf_or_image_with_ocr
+    for page_number, image in enumerate(
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/partition/pdf_image/pdf_image_utils.py", line 400, in convert_pdf_to_images
+    info = pdf2image.pdfinfo_from_path(filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/pdf2image/pdf2image.py", line 607, in pdfinfo_from_path
+    raise PDFInfoNotInstalledError(
+pdf2image.exceptions.PDFInfoNotInstalledError: Unable to get page count. Is poppler installed and in PATH?
+
+2024-10-23 05:34:51,174 - ERROR - Error occurred during processing: Error: Unable to get page count. Is poppler installed and in PATH?, traceback: Traceback (most recent call last):
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/pdf2image/pdf2image.py", line 581, in pdfinfo_from_path
+    proc = Popen(command, env=env, stdout=PIPE, stderr=PIPE)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/subprocess.py", line 1026, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/subprocess.py", line 1955, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'pdfinfo'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dev/Documents/integrity_chatbot/utils/document_generation.py", line 89, in generate_documents
+    pdf_text_documents = pdf_loader.load()
+                         ^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/langchain_core/document_loaders/base.py", line 31, in load
+    return list(self.lazy_load())
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/langchain_community/document_loaders/unstructured.py", line 107, in lazy_load
+    elements = self._get_elements()
+               ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/langchain_community/document_loaders/pdf.py", line 74, in _get_elements
+    return partition_pdf(filename=self.file_path, **self.unstructured_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/documents/elements.py", line 578, in wrapper
+    elements = func(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/file_utils/filetype.py", line 725, in wrapper
+    elements = func(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/file_utils/filetype.py", line 683, in wrapper
+    elements = func(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/chunking/dispatch.py", line 74, in wrapper
+    elements = func(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/partition/pdf.py", line 200, in partition_pdf
+    return partition_pdf_or_image(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/partition/pdf.py", line 330, in partition_pdf_or_image
+    elements = _partition_pdf_or_image_with_ocr(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/partition/pdf.py", line 871, in _partition_pdf_or_image_with_ocr
+    for page_number, image in enumerate(
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/partition/pdf_image/pdf_image_utils.py", line 400, in convert_pdf_to_images
+    info = pdf2image.pdfinfo_from_path(filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/pdf2image/pdf2image.py", line 607, in pdfinfo_from_path
+    raise PDFInfoNotInstalledError(
+pdf2image.exceptions.PDFInfoNotInstalledError: Unable to get page count. Is poppler installed and in PATH?
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dev/Documents/integrity_chatbot/main.py", line 66, in upload_pdf_endpoint
+    docs = document_generator.generate_documents(file=str(temp_file.name), file_name=file_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/utils/document_generation.py", line 99, in generate_documents
+    raise Exception (f"Error: {e}")
+Exception: Error: Unable to get page count. Is poppler installed and in PATH?
+
+2024-10-23 06:35:52,493 - INFO - Generating Documents
+2024-10-23 06:36:04,588 - INFO - PDF text extraction failed, skip text extraction...
+2024-10-23 06:36:04,633 - ERROR - Error while Generating Documents: Unable to get page count. Is poppler installed and in PATH? trace_back:Traceback (most recent call last):
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/pdf2image/pdf2image.py", line 581, in pdfinfo_from_path
+    proc = Popen(command, env=env, stdout=PIPE, stderr=PIPE)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/subprocess.py", line 1026, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/subprocess.py", line 1955, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'pdfinfo'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dev/Documents/integrity_chatbot/utils/document_generation.py", line 89, in generate_documents
+    pdf_text_documents = pdf_loader.load()
+                         ^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/langchain_core/document_loaders/base.py", line 31, in load
+    return list(self.lazy_load())
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/langchain_community/document_loaders/unstructured.py", line 107, in lazy_load
+    elements = self._get_elements()
+               ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/langchain_community/document_loaders/pdf.py", line 74, in _get_elements
+    return partition_pdf(filename=self.file_path, **self.unstructured_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/documents/elements.py", line 578, in wrapper
+    elements = func(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/file_utils/filetype.py", line 725, in wrapper
+    elements = func(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/file_utils/filetype.py", line 683, in wrapper
+    elements = func(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/chunking/dispatch.py", line 74, in wrapper
+    elements = func(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/partition/pdf.py", line 200, in partition_pdf
+    return partition_pdf_or_image(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/partition/pdf.py", line 330, in partition_pdf_or_image
+    elements = _partition_pdf_or_image_with_ocr(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/partition/pdf.py", line 871, in _partition_pdf_or_image_with_ocr
+    for page_number, image in enumerate(
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/partition/pdf_image/pdf_image_utils.py", line 400, in convert_pdf_to_images
+    info = pdf2image.pdfinfo_from_path(filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/pdf2image/pdf2image.py", line 607, in pdfinfo_from_path
+    raise PDFInfoNotInstalledError(
+pdf2image.exceptions.PDFInfoNotInstalledError: Unable to get page count. Is poppler installed and in PATH?
+
+2024-10-23 06:36:04,646 - ERROR - Error occurred during processing: Error: Unable to get page count. Is poppler installed and in PATH?, traceback: Traceback (most recent call last):
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/pdf2image/pdf2image.py", line 581, in pdfinfo_from_path
+    proc = Popen(command, env=env, stdout=PIPE, stderr=PIPE)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/subprocess.py", line 1026, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/subprocess.py", line 1955, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'pdfinfo'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dev/Documents/integrity_chatbot/utils/document_generation.py", line 89, in generate_documents
+    pdf_text_documents = pdf_loader.load()
+                         ^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/langchain_core/document_loaders/base.py", line 31, in load
+    return list(self.lazy_load())
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/langchain_community/document_loaders/unstructured.py", line 107, in lazy_load
+    elements = self._get_elements()
+               ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/langchain_community/document_loaders/pdf.py", line 74, in _get_elements
+    return partition_pdf(filename=self.file_path, **self.unstructured_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/documents/elements.py", line 578, in wrapper
+    elements = func(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/file_utils/filetype.py", line 725, in wrapper
+    elements = func(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/file_utils/filetype.py", line 683, in wrapper
+    elements = func(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/chunking/dispatch.py", line 74, in wrapper
+    elements = func(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/partition/pdf.py", line 200, in partition_pdf
+    return partition_pdf_or_image(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/partition/pdf.py", line 330, in partition_pdf_or_image
+    elements = _partition_pdf_or_image_with_ocr(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/partition/pdf.py", line 871, in _partition_pdf_or_image_with_ocr
+    for page_number, image in enumerate(
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/partition/pdf_image/pdf_image_utils.py", line 400, in convert_pdf_to_images
+    info = pdf2image.pdfinfo_from_path(filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/pdf2image/pdf2image.py", line 607, in pdfinfo_from_path
+    raise PDFInfoNotInstalledError(
+pdf2image.exceptions.PDFInfoNotInstalledError: Unable to get page count. Is poppler installed and in PATH?
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dev/Documents/integrity_chatbot/main.py", line 66, in upload_pdf_endpoint
+    docs = document_generator.generate_documents(file=str(temp_file.name), file_name=file_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/utils/document_generation.py", line 99, in generate_documents
+    raise Exception (f"Error: {e}")
+Exception: Error: Unable to get page count. Is poppler installed and in PATH?
+
+2024-10-23 06:43:30,108 - INFO - Generating Documents
+2024-10-23 06:43:48,464 - INFO - PDF text extraction failed, skip text extraction...
+2024-10-23 06:43:48,543 - ERROR - Error while Generating Documents: Unable to get page count. Is poppler installed and in PATH? trace_back:Traceback (most recent call last):
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/pdf2image/pdf2image.py", line 581, in pdfinfo_from_path
+    proc = Popen(command, env=env, stdout=PIPE, stderr=PIPE)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/subprocess.py", line 1026, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/subprocess.py", line 1955, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'pdfinfo'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dev/Documents/integrity_chatbot/utils/document_generation.py", line 89, in generate_documents
+    pdf_text_documents = pdf_loader.load()
+                         ^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/langchain_core/document_loaders/base.py", line 31, in load
+    return list(self.lazy_load())
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/langchain_community/document_loaders/unstructured.py", line 107, in lazy_load
+    elements = self._get_elements()
+               ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/langchain_community/document_loaders/pdf.py", line 74, in _get_elements
+    return partition_pdf(filename=self.file_path, **self.unstructured_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/documents/elements.py", line 578, in wrapper
+    elements = func(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/file_utils/filetype.py", line 725, in wrapper
+    elements = func(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/file_utils/filetype.py", line 683, in wrapper
+    elements = func(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/chunking/dispatch.py", line 74, in wrapper
+    elements = func(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/partition/pdf.py", line 200, in partition_pdf
+    return partition_pdf_or_image(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/partition/pdf.py", line 330, in partition_pdf_or_image
+    elements = _partition_pdf_or_image_with_ocr(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/partition/pdf.py", line 871, in _partition_pdf_or_image_with_ocr
+    for page_number, image in enumerate(
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/partition/pdf_image/pdf_image_utils.py", line 400, in convert_pdf_to_images
+    info = pdf2image.pdfinfo_from_path(filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/pdf2image/pdf2image.py", line 607, in pdfinfo_from_path
+    raise PDFInfoNotInstalledError(
+pdf2image.exceptions.PDFInfoNotInstalledError: Unable to get page count. Is poppler installed and in PATH?
+
+2024-10-23 06:43:48,548 - ERROR - Error occurred during processing: Error: Unable to get page count. Is poppler installed and in PATH?, traceback: Traceback (most recent call last):
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/pdf2image/pdf2image.py", line 581, in pdfinfo_from_path
+    proc = Popen(command, env=env, stdout=PIPE, stderr=PIPE)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/subprocess.py", line 1026, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/subprocess.py", line 1955, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'pdfinfo'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dev/Documents/integrity_chatbot/utils/document_generation.py", line 89, in generate_documents
+    pdf_text_documents = pdf_loader.load()
+                         ^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/langchain_core/document_loaders/base.py", line 31, in load
+    return list(self.lazy_load())
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/langchain_community/document_loaders/unstructured.py", line 107, in lazy_load
+    elements = self._get_elements()
+               ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/langchain_community/document_loaders/pdf.py", line 74, in _get_elements
+    return partition_pdf(filename=self.file_path, **self.unstructured_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/documents/elements.py", line 578, in wrapper
+    elements = func(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/file_utils/filetype.py", line 725, in wrapper
+    elements = func(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/file_utils/filetype.py", line 683, in wrapper
+    elements = func(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/chunking/dispatch.py", line 74, in wrapper
+    elements = func(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/partition/pdf.py", line 200, in partition_pdf
+    return partition_pdf_or_image(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/partition/pdf.py", line 330, in partition_pdf_or_image
+    elements = _partition_pdf_or_image_with_ocr(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/partition/pdf.py", line 871, in _partition_pdf_or_image_with_ocr
+    for page_number, image in enumerate(
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/partition/pdf_image/pdf_image_utils.py", line 400, in convert_pdf_to_images
+    info = pdf2image.pdfinfo_from_path(filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/pdf2image/pdf2image.py", line 607, in pdfinfo_from_path
+    raise PDFInfoNotInstalledError(
+pdf2image.exceptions.PDFInfoNotInstalledError: Unable to get page count. Is poppler installed and in PATH?
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dev/Documents/integrity_chatbot/main.py", line 66, in upload_pdf_endpoint
+    docs = document_generator.generate_documents(file=str(temp_file.name), file_name=file_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/utils/document_generation.py", line 99, in generate_documents
+    raise Exception (f"Error: {e}")
+Exception: Error: Unable to get page count. Is poppler installed and in PATH?
+
+2024-10-23 07:04:13,119 - INFO - Generating Documents
+2024-10-23 07:04:23,781 - INFO - PDF text extraction failed, skip text extraction...
+2024-10-23 07:04:39,172 - INFO - Reading PDF for file: /var/folders/2w/z3yz5kmd4knb32ry380bnfw80000gn/T/tmpbf6bqp2b ...
+2024-10-23 07:04:42,221 - ERROR - Error while Generating Documents: Unable to get page count. Is poppler installed and in PATH? trace_back:Traceback (most recent call last):
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/pdf2image/pdf2image.py", line 581, in pdfinfo_from_path
+    proc = Popen(command, env=env, stdout=PIPE, stderr=PIPE)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/subprocess.py", line 1026, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/subprocess.py", line 1955, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'pdfinfo'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dev/Documents/integrity_chatbot/utils/document_generation.py", line 89, in generate_documents
+    pdf_text_documents = pdf_loader.load()
+                         ^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/langchain_core/document_loaders/base.py", line 31, in load
+    return list(self.lazy_load())
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/langchain_community/document_loaders/unstructured.py", line 107, in lazy_load
+    elements = self._get_elements()
+               ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/langchain_community/document_loaders/pdf.py", line 74, in _get_elements
+    return partition_pdf(filename=self.file_path, **self.unstructured_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/documents/elements.py", line 578, in wrapper
+    elements = func(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/file_utils/filetype.py", line 725, in wrapper
+    elements = func(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/file_utils/filetype.py", line 683, in wrapper
+    elements = func(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/chunking/dispatch.py", line 74, in wrapper
+    elements = func(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/partition/pdf.py", line 200, in partition_pdf
+    return partition_pdf_or_image(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/partition/pdf.py", line 296, in partition_pdf_or_image
+    elements = _partition_pdf_or_image_local(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/utils.py", line 216, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/partition/pdf.py", line 584, in _partition_pdf_or_image_local
+    inferred_document_layout = process_file_with_model(
+                               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured_inference/inference/layout.py", line 376, in process_file_with_model
+    else DocumentLayout.from_file(
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured_inference/inference/layout.py", line 60, in from_file
+    _image_paths = convert_pdf_to_image(
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured_inference/inference/layout.py", line 400, in convert_pdf_to_image
+    images = pdf2image.convert_from_path(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/pdf2image/pdf2image.py", line 127, in convert_from_path
+    page_count = pdfinfo_from_path(
+                 ^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/pdf2image/pdf2image.py", line 607, in pdfinfo_from_path
+    raise PDFInfoNotInstalledError(
+pdf2image.exceptions.PDFInfoNotInstalledError: Unable to get page count. Is poppler installed and in PATH?
+
+2024-10-23 07:04:42,225 - ERROR - Error occurred during processing: Error: Unable to get page count. Is poppler installed and in PATH?, traceback: Traceback (most recent call last):
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/pdf2image/pdf2image.py", line 581, in pdfinfo_from_path
+    proc = Popen(command, env=env, stdout=PIPE, stderr=PIPE)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/subprocess.py", line 1026, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/subprocess.py", line 1955, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'pdfinfo'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dev/Documents/integrity_chatbot/utils/document_generation.py", line 89, in generate_documents
+    pdf_text_documents = pdf_loader.load()
+                         ^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/langchain_core/document_loaders/base.py", line 31, in load
+    return list(self.lazy_load())
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/langchain_community/document_loaders/unstructured.py", line 107, in lazy_load
+    elements = self._get_elements()
+               ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/langchain_community/document_loaders/pdf.py", line 74, in _get_elements
+    return partition_pdf(filename=self.file_path, **self.unstructured_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/documents/elements.py", line 578, in wrapper
+    elements = func(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/file_utils/filetype.py", line 725, in wrapper
+    elements = func(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/file_utils/filetype.py", line 683, in wrapper
+    elements = func(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/chunking/dispatch.py", line 74, in wrapper
+    elements = func(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/partition/pdf.py", line 200, in partition_pdf
+    return partition_pdf_or_image(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/partition/pdf.py", line 296, in partition_pdf_or_image
+    elements = _partition_pdf_or_image_local(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/utils.py", line 216, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/partition/pdf.py", line 584, in _partition_pdf_or_image_local
+    inferred_document_layout = process_file_with_model(
+                               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured_inference/inference/layout.py", line 376, in process_file_with_model
+    else DocumentLayout.from_file(
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured_inference/inference/layout.py", line 60, in from_file
+    _image_paths = convert_pdf_to_image(
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured_inference/inference/layout.py", line 400, in convert_pdf_to_image
+    images = pdf2image.convert_from_path(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/pdf2image/pdf2image.py", line 127, in convert_from_path
+    page_count = pdfinfo_from_path(
+                 ^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/pdf2image/pdf2image.py", line 607, in pdfinfo_from_path
+    raise PDFInfoNotInstalledError(
+pdf2image.exceptions.PDFInfoNotInstalledError: Unable to get page count. Is poppler installed and in PATH?
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dev/Documents/integrity_chatbot/main.py", line 66, in upload_pdf_endpoint
+    docs = document_generator.generate_documents(file=str(temp_file.name), file_name=file_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/utils/document_generation.py", line 99, in generate_documents
+    raise Exception (f"Error: {e}")
+Exception: Error: Unable to get page count. Is poppler installed and in PATH?
+
+2024-10-23 07:11:43,267 - INFO - Generating Documents
+2024-10-23 07:11:43,270 - INFO - PDF text extraction failed, skip text extraction...
+2024-10-23 07:11:43,270 - INFO - Reading PDF for file: /var/folders/2w/z3yz5kmd4knb32ry380bnfw80000gn/T/tmpawv9rpmv ...
+2024-10-23 07:11:43,298 - ERROR - Error while Generating Documents: Unable to get page count. Is poppler installed and in PATH? trace_back:Traceback (most recent call last):
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/pdf2image/pdf2image.py", line 581, in pdfinfo_from_path
+    proc = Popen(command, env=env, stdout=PIPE, stderr=PIPE)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/subprocess.py", line 1026, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/subprocess.py", line 1955, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'pdfinfo'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dev/Documents/integrity_chatbot/utils/document_generation.py", line 89, in generate_documents
+    pdf_text_documents = pdf_loader.load()
+                         ^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/langchain_core/document_loaders/base.py", line 31, in load
+    return list(self.lazy_load())
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/langchain_community/document_loaders/unstructured.py", line 107, in lazy_load
+    elements = self._get_elements()
+               ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/langchain_community/document_loaders/pdf.py", line 74, in _get_elements
+    return partition_pdf(filename=self.file_path, **self.unstructured_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/documents/elements.py", line 578, in wrapper
+    elements = func(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/file_utils/filetype.py", line 725, in wrapper
+    elements = func(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/file_utils/filetype.py", line 683, in wrapper
+    elements = func(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/chunking/dispatch.py", line 74, in wrapper
+    elements = func(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/partition/pdf.py", line 200, in partition_pdf
+    return partition_pdf_or_image(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/partition/pdf.py", line 296, in partition_pdf_or_image
+    elements = _partition_pdf_or_image_local(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/utils.py", line 216, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/partition/pdf.py", line 584, in _partition_pdf_or_image_local
+    inferred_document_layout = process_file_with_model(
+                               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured_inference/inference/layout.py", line 376, in process_file_with_model
+    else DocumentLayout.from_file(
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured_inference/inference/layout.py", line 60, in from_file
+    _image_paths = convert_pdf_to_image(
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured_inference/inference/layout.py", line 400, in convert_pdf_to_image
+    images = pdf2image.convert_from_path(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/pdf2image/pdf2image.py", line 127, in convert_from_path
+    page_count = pdfinfo_from_path(
+                 ^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/pdf2image/pdf2image.py", line 607, in pdfinfo_from_path
+    raise PDFInfoNotInstalledError(
+pdf2image.exceptions.PDFInfoNotInstalledError: Unable to get page count. Is poppler installed and in PATH?
+
+2024-10-23 07:11:43,303 - ERROR - Error occurred during processing: Error: Unable to get page count. Is poppler installed and in PATH?, traceback: Traceback (most recent call last):
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/pdf2image/pdf2image.py", line 581, in pdfinfo_from_path
+    proc = Popen(command, env=env, stdout=PIPE, stderr=PIPE)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/subprocess.py", line 1026, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/subprocess.py", line 1955, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'pdfinfo'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dev/Documents/integrity_chatbot/utils/document_generation.py", line 89, in generate_documents
+    pdf_text_documents = pdf_loader.load()
+                         ^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/langchain_core/document_loaders/base.py", line 31, in load
+    return list(self.lazy_load())
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/langchain_community/document_loaders/unstructured.py", line 107, in lazy_load
+    elements = self._get_elements()
+               ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/langchain_community/document_loaders/pdf.py", line 74, in _get_elements
+    return partition_pdf(filename=self.file_path, **self.unstructured_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/documents/elements.py", line 578, in wrapper
+    elements = func(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/file_utils/filetype.py", line 725, in wrapper
+    elements = func(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/file_utils/filetype.py", line 683, in wrapper
+    elements = func(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/chunking/dispatch.py", line 74, in wrapper
+    elements = func(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/partition/pdf.py", line 200, in partition_pdf
+    return partition_pdf_or_image(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/partition/pdf.py", line 296, in partition_pdf_or_image
+    elements = _partition_pdf_or_image_local(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/utils.py", line 216, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/partition/pdf.py", line 584, in _partition_pdf_or_image_local
+    inferred_document_layout = process_file_with_model(
+                               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured_inference/inference/layout.py", line 376, in process_file_with_model
+    else DocumentLayout.from_file(
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured_inference/inference/layout.py", line 60, in from_file
+    _image_paths = convert_pdf_to_image(
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured_inference/inference/layout.py", line 400, in convert_pdf_to_image
+    images = pdf2image.convert_from_path(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/pdf2image/pdf2image.py", line 127, in convert_from_path
+    page_count = pdfinfo_from_path(
+                 ^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/pdf2image/pdf2image.py", line 607, in pdfinfo_from_path
+    raise PDFInfoNotInstalledError(
+pdf2image.exceptions.PDFInfoNotInstalledError: Unable to get page count. Is poppler installed and in PATH?
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dev/Documents/integrity_chatbot/main.py", line 66, in upload_pdf_endpoint
+    docs = document_generator.generate_documents(file=str(temp_file.name), file_name=file_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/utils/document_generation.py", line 99, in generate_documents
+    raise Exception (f"Error: {e}")
+Exception: Error: Unable to get page count. Is poppler installed and in PATH?
+
+2024-10-23 07:12:49,578 - INFO - Generating Documents
+2024-10-23 07:13:01,082 - INFO - PDF text extraction failed, skip text extraction...
+2024-10-23 07:13:03,102 - INFO - Reading PDF for file: /var/folders/2w/z3yz5kmd4knb32ry380bnfw80000gn/T/tmpea9tvxxd ...
+2024-10-23 07:13:03,162 - ERROR - Error while Generating Documents: Unable to get page count. Is poppler installed and in PATH? trace_back:Traceback (most recent call last):
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/pdf2image/pdf2image.py", line 581, in pdfinfo_from_path
+    proc = Popen(command, env=env, stdout=PIPE, stderr=PIPE)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/subprocess.py", line 1026, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/subprocess.py", line 1955, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'pdfinfo'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dev/Documents/integrity_chatbot/utils/document_generation.py", line 89, in generate_documents
+    pdf_text_documents = pdf_loader.load()
+                         ^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/langchain_core/document_loaders/base.py", line 31, in load
+    return list(self.lazy_load())
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/langchain_community/document_loaders/unstructured.py", line 107, in lazy_load
+    elements = self._get_elements()
+               ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/langchain_community/document_loaders/pdf.py", line 74, in _get_elements
+    return partition_pdf(filename=self.file_path, **self.unstructured_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/documents/elements.py", line 578, in wrapper
+    elements = func(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/file_utils/filetype.py", line 725, in wrapper
+    elements = func(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/file_utils/filetype.py", line 683, in wrapper
+    elements = func(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/chunking/dispatch.py", line 74, in wrapper
+    elements = func(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/partition/pdf.py", line 200, in partition_pdf
+    return partition_pdf_or_image(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/partition/pdf.py", line 296, in partition_pdf_or_image
+    elements = _partition_pdf_or_image_local(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/utils.py", line 216, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/partition/pdf.py", line 584, in _partition_pdf_or_image_local
+    inferred_document_layout = process_file_with_model(
+                               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured_inference/inference/layout.py", line 376, in process_file_with_model
+    else DocumentLayout.from_file(
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured_inference/inference/layout.py", line 60, in from_file
+    _image_paths = convert_pdf_to_image(
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured_inference/inference/layout.py", line 400, in convert_pdf_to_image
+    images = pdf2image.convert_from_path(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/pdf2image/pdf2image.py", line 127, in convert_from_path
+    page_count = pdfinfo_from_path(
+                 ^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/pdf2image/pdf2image.py", line 607, in pdfinfo_from_path
+    raise PDFInfoNotInstalledError(
+pdf2image.exceptions.PDFInfoNotInstalledError: Unable to get page count. Is poppler installed and in PATH?
+
+2024-10-23 07:13:03,165 - ERROR - Error occurred during processing: Error: Unable to get page count. Is poppler installed and in PATH?, traceback: Traceback (most recent call last):
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/pdf2image/pdf2image.py", line 581, in pdfinfo_from_path
+    proc = Popen(command, env=env, stdout=PIPE, stderr=PIPE)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/subprocess.py", line 1026, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/subprocess.py", line 1955, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'pdfinfo'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dev/Documents/integrity_chatbot/utils/document_generation.py", line 89, in generate_documents
+    pdf_text_documents = pdf_loader.load()
+                         ^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/langchain_core/document_loaders/base.py", line 31, in load
+    return list(self.lazy_load())
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/langchain_community/document_loaders/unstructured.py", line 107, in lazy_load
+    elements = self._get_elements()
+               ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/langchain_community/document_loaders/pdf.py", line 74, in _get_elements
+    return partition_pdf(filename=self.file_path, **self.unstructured_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/documents/elements.py", line 578, in wrapper
+    elements = func(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/file_utils/filetype.py", line 725, in wrapper
+    elements = func(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/file_utils/filetype.py", line 683, in wrapper
+    elements = func(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/chunking/dispatch.py", line 74, in wrapper
+    elements = func(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/partition/pdf.py", line 200, in partition_pdf
+    return partition_pdf_or_image(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/partition/pdf.py", line 296, in partition_pdf_or_image
+    elements = _partition_pdf_or_image_local(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/utils.py", line 216, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/partition/pdf.py", line 584, in _partition_pdf_or_image_local
+    inferred_document_layout = process_file_with_model(
+                               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured_inference/inference/layout.py", line 376, in process_file_with_model
+    else DocumentLayout.from_file(
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured_inference/inference/layout.py", line 60, in from_file
+    _image_paths = convert_pdf_to_image(
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured_inference/inference/layout.py", line 400, in convert_pdf_to_image
+    images = pdf2image.convert_from_path(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/pdf2image/pdf2image.py", line 127, in convert_from_path
+    page_count = pdfinfo_from_path(
+                 ^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/pdf2image/pdf2image.py", line 607, in pdfinfo_from_path
+    raise PDFInfoNotInstalledError(
+pdf2image.exceptions.PDFInfoNotInstalledError: Unable to get page count. Is poppler installed and in PATH?
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dev/Documents/integrity_chatbot/main.py", line 66, in upload_pdf_endpoint
+    docs = document_generator.generate_documents(file=str(temp_file.name), file_name=file_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/utils/document_generation.py", line 99, in generate_documents
+    raise Exception (f"Error: {e}")
+Exception: Error: Unable to get page count. Is poppler installed and in PATH?
+
+2024-10-23 07:14:16,905 - INFO - Generating Documents
+2024-10-23 07:14:27,096 - INFO - PDF text extraction failed, skip text extraction...
+2024-10-23 07:14:27,143 - ERROR - Error while Generating Documents: Unable to get page count. Is poppler installed and in PATH? trace_back:Traceback (most recent call last):
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/pdf2image/pdf2image.py", line 581, in pdfinfo_from_path
+    proc = Popen(command, env=env, stdout=PIPE, stderr=PIPE)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/subprocess.py", line 1026, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/subprocess.py", line 1955, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'pdfinfo'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dev/Documents/integrity_chatbot/utils/document_generation.py", line 89, in generate_documents
+    pdf_text_documents = pdf_loader.load()
+                         ^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/langchain_core/document_loaders/base.py", line 31, in load
+    return list(self.lazy_load())
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/langchain_community/document_loaders/unstructured.py", line 107, in lazy_load
+    elements = self._get_elements()
+               ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/langchain_community/document_loaders/pdf.py", line 74, in _get_elements
+    return partition_pdf(filename=self.file_path, **self.unstructured_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/documents/elements.py", line 578, in wrapper
+    elements = func(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/file_utils/filetype.py", line 725, in wrapper
+    elements = func(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/file_utils/filetype.py", line 683, in wrapper
+    elements = func(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/chunking/dispatch.py", line 74, in wrapper
+    elements = func(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/partition/pdf.py", line 200, in partition_pdf
+    return partition_pdf_or_image(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/partition/pdf.py", line 330, in partition_pdf_or_image
+    elements = _partition_pdf_or_image_with_ocr(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/partition/pdf.py", line 871, in _partition_pdf_or_image_with_ocr
+    for page_number, image in enumerate(
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/partition/pdf_image/pdf_image_utils.py", line 400, in convert_pdf_to_images
+    info = pdf2image.pdfinfo_from_path(filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/pdf2image/pdf2image.py", line 607, in pdfinfo_from_path
+    raise PDFInfoNotInstalledError(
+pdf2image.exceptions.PDFInfoNotInstalledError: Unable to get page count. Is poppler installed and in PATH?
+
+2024-10-23 07:14:27,145 - ERROR - Error occurred during processing: Error: Unable to get page count. Is poppler installed and in PATH?, traceback: Traceback (most recent call last):
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/pdf2image/pdf2image.py", line 581, in pdfinfo_from_path
+    proc = Popen(command, env=env, stdout=PIPE, stderr=PIPE)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/subprocess.py", line 1026, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/subprocess.py", line 1955, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'pdfinfo'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dev/Documents/integrity_chatbot/utils/document_generation.py", line 89, in generate_documents
+    pdf_text_documents = pdf_loader.load()
+                         ^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/langchain_core/document_loaders/base.py", line 31, in load
+    return list(self.lazy_load())
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/langchain_community/document_loaders/unstructured.py", line 107, in lazy_load
+    elements = self._get_elements()
+               ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/langchain_community/document_loaders/pdf.py", line 74, in _get_elements
+    return partition_pdf(filename=self.file_path, **self.unstructured_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/documents/elements.py", line 578, in wrapper
+    elements = func(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/file_utils/filetype.py", line 725, in wrapper
+    elements = func(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/file_utils/filetype.py", line 683, in wrapper
+    elements = func(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/chunking/dispatch.py", line 74, in wrapper
+    elements = func(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/partition/pdf.py", line 200, in partition_pdf
+    return partition_pdf_or_image(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/partition/pdf.py", line 330, in partition_pdf_or_image
+    elements = _partition_pdf_or_image_with_ocr(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/partition/pdf.py", line 871, in _partition_pdf_or_image_with_ocr
+    for page_number, image in enumerate(
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/partition/pdf_image/pdf_image_utils.py", line 400, in convert_pdf_to_images
+    info = pdf2image.pdfinfo_from_path(filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/pdf2image/pdf2image.py", line 607, in pdfinfo_from_path
+    raise PDFInfoNotInstalledError(
+pdf2image.exceptions.PDFInfoNotInstalledError: Unable to get page count. Is poppler installed and in PATH?
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dev/Documents/integrity_chatbot/main.py", line 66, in upload_pdf_endpoint
+    docs = document_generator.generate_documents(file=str(temp_file.name), file_name=file_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/utils/document_generation.py", line 99, in generate_documents
+    raise Exception (f"Error: {e}")
+Exception: Error: Unable to get page count. Is poppler installed and in PATH?
+
+2024-10-23 07:17:55,399 - INFO - Generating Documents
+2024-10-23 07:18:02,512 - INFO - PDF text extraction failed, skip text extraction...
+2024-10-23 07:18:02,555 - ERROR - Error while Generating Documents: Unable to get page count. Is poppler installed and in PATH? trace_back:Traceback (most recent call last):
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/pdf2image/pdf2image.py", line 581, in pdfinfo_from_path
+    proc = Popen(command, env=env, stdout=PIPE, stderr=PIPE)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/subprocess.py", line 1026, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/subprocess.py", line 1955, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'pdfinfo'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dev/Documents/integrity_chatbot/utils/document_generation.py", line 89, in generate_documents
+    pdf_text_documents = pdf_loader.load()
+                         ^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/langchain_core/document_loaders/base.py", line 31, in load
+    return list(self.lazy_load())
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/langchain_community/document_loaders/unstructured.py", line 107, in lazy_load
+    elements = self._get_elements()
+               ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/langchain_community/document_loaders/pdf.py", line 74, in _get_elements
+    return partition_pdf(filename=self.file_path, **self.unstructured_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/documents/elements.py", line 578, in wrapper
+    elements = func(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/file_utils/filetype.py", line 725, in wrapper
+    elements = func(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/file_utils/filetype.py", line 683, in wrapper
+    elements = func(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/chunking/dispatch.py", line 74, in wrapper
+    elements = func(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/partition/pdf.py", line 200, in partition_pdf
+    return partition_pdf_or_image(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/partition/pdf.py", line 330, in partition_pdf_or_image
+    elements = _partition_pdf_or_image_with_ocr(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/partition/pdf.py", line 871, in _partition_pdf_or_image_with_ocr
+    for page_number, image in enumerate(
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/partition/pdf_image/pdf_image_utils.py", line 400, in convert_pdf_to_images
+    info = pdf2image.pdfinfo_from_path(filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/pdf2image/pdf2image.py", line 607, in pdfinfo_from_path
+    raise PDFInfoNotInstalledError(
+pdf2image.exceptions.PDFInfoNotInstalledError: Unable to get page count. Is poppler installed and in PATH?
+
+2024-10-23 07:18:02,558 - ERROR - Error occurred during processing: Error: Unable to get page count. Is poppler installed and in PATH?, traceback: Traceback (most recent call last):
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/pdf2image/pdf2image.py", line 581, in pdfinfo_from_path
+    proc = Popen(command, env=env, stdout=PIPE, stderr=PIPE)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/subprocess.py", line 1026, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/subprocess.py", line 1955, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'pdfinfo'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dev/Documents/integrity_chatbot/utils/document_generation.py", line 89, in generate_documents
+    pdf_text_documents = pdf_loader.load()
+                         ^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/langchain_core/document_loaders/base.py", line 31, in load
+    return list(self.lazy_load())
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/langchain_community/document_loaders/unstructured.py", line 107, in lazy_load
+    elements = self._get_elements()
+               ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/langchain_community/document_loaders/pdf.py", line 74, in _get_elements
+    return partition_pdf(filename=self.file_path, **self.unstructured_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/documents/elements.py", line 578, in wrapper
+    elements = func(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/file_utils/filetype.py", line 725, in wrapper
+    elements = func(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/file_utils/filetype.py", line 683, in wrapper
+    elements = func(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/chunking/dispatch.py", line 74, in wrapper
+    elements = func(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/partition/pdf.py", line 200, in partition_pdf
+    return partition_pdf_or_image(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/partition/pdf.py", line 330, in partition_pdf_or_image
+    elements = _partition_pdf_or_image_with_ocr(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/partition/pdf.py", line 871, in _partition_pdf_or_image_with_ocr
+    for page_number, image in enumerate(
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/unstructured/partition/pdf_image/pdf_image_utils.py", line 400, in convert_pdf_to_images
+    info = pdf2image.pdfinfo_from_path(filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/pdf2image/pdf2image.py", line 607, in pdfinfo_from_path
+    raise PDFInfoNotInstalledError(
+pdf2image.exceptions.PDFInfoNotInstalledError: Unable to get page count. Is poppler installed and in PATH?
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dev/Documents/integrity_chatbot/main.py", line 66, in upload_pdf_endpoint
+    docs = document_generator.generate_documents(file=str(temp_file.name), file_name=file_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/utils/document_generation.py", line 101, in generate_documents
+    raise Exception (f"Error: {e}")
+Exception: Error: Unable to get page count. Is poppler installed and in PATH?
+
+2024-10-23 07:21:49,209 - INFO - Generating Documents
+2024-10-23 07:21:58,397 - INFO - PDF text extraction failed, skip text extraction...
+2024-10-23 07:21:58,400 - INFO - Document loaded
+2024-10-23 07:21:58,400 - INFO - Cleaning Documents
+2024-10-23 07:22:04,652 - INFO - Documents Generated Successfully
+2024-10-23 07:22:04,660 - ERROR - Error occurred during processing: list indices must be integers or slices, not str, traceback: Traceback (most recent call last):
+  File "/Users/dev/Documents/integrity_chatbot/main.py", line 80, in upload_pdf_endpoint
+    milvus_manager.create_tenant_collection(tenant_id=uuid, fields=fields)
+  File "/Users/dev/Documents/integrity_chatbot/utils/MilvusManager.py", line 33, in create_tenant_collection
+    FieldSchema(name=name, dtype=kwargs[name]["dtype"],
+                                ~~~~~~~~~~~~^^^^^^^^^
+TypeError: list indices must be integers or slices, not str
+
+2024-10-23 07:25:17,467 - INFO - Generating Documents
+2024-10-23 07:25:25,729 - INFO - PDF text extraction failed, skip text extraction...
+2024-10-23 07:25:25,732 - INFO - Document loaded
+2024-10-23 07:25:25,732 - INFO - Cleaning Documents
+2024-10-23 07:25:26,053 - INFO - Documents Generated Successfully
+2024-10-23 07:25:26,059 - ERROR - Error occurred during processing: list indices must be integers or slices, not str, traceback: Traceback (most recent call last):
+  File "/Users/dev/Documents/integrity_chatbot/main.py", line 80, in upload_pdf_endpoint
+    milvus_manager.create_tenant_collection(tenant_id=uuid, fields=fields)
+  File "/Users/dev/Documents/integrity_chatbot/utils/MilvusManager.py", line 39, in create_tenant_collection
+    FieldSchema(name=name, dtype=kwargs[name]["dtype"],
+                                ~~~~~~~~~~~~^^^^^^^^^
+TypeError: list indices must be integers or slices, not str
+
+2024-10-23 07:28:20,926 - INFO - Generating Documents
+2024-10-23 07:28:28,449 - INFO - PDF text extraction failed, skip text extraction...
+2024-10-23 07:28:28,452 - INFO - Document loaded
+2024-10-23 07:28:28,452 - INFO - Cleaning Documents
+2024-10-23 07:28:28,775 - INFO - Documents Generated Successfully
+2024-10-23 07:28:28,777 - ERROR - Error occurred during processing: MilvusManager.has_collection() takes 1 positional argument but 2 were given, traceback: Traceback (most recent call last):
+  File "/Users/dev/Documents/integrity_chatbot/main.py", line 80, in upload_pdf_endpoint
+    milvus_manager.create_tenant_collection(tenant_id=uuid, fields=fields)
+  File "/Users/dev/Documents/integrity_chatbot/utils/MilvusManager.py", line 32, in create_tenant_collection
+    if self.has_collection(collection_name):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: MilvusManager.has_collection() takes 1 positional argument but 2 were given
+
+2024-10-23 07:29:26,462 - INFO - Generating Documents
+2024-10-23 07:29:31,746 - INFO - PDF text extraction failed, skip text extraction...
+2024-10-23 07:29:31,748 - INFO - Document loaded
+2024-10-23 07:29:31,748 - INFO - Cleaning Documents
+2024-10-23 07:29:32,059 - INFO - Documents Generated Successfully
+2024-10-23 07:29:32,110 - INFO - Collection tenant_1234 created.
+2024-10-23 07:29:32,111 - INFO - Doc type : <class 'list'>
+2024-10-23 07:29:32,111 - ERROR - Error occurred during processing: cannot access local variable 'embeddings' where it is not associated with a value, traceback: Traceback (most recent call last):
+  File "/Users/dev/Documents/integrity_chatbot/main.py", line 85, in upload_pdf_endpoint
+    embeddings = embeddings.embed_documents(docs)
+                 ^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'embeddings' where it is not associated with a value
+
+2024-10-23 07:31:50,571 - INFO - Generating Documents
+2024-10-23 07:31:57,849 - INFO - PDF text extraction failed, skip text extraction...
+2024-10-23 07:31:57,852 - INFO - Document loaded
+2024-10-23 07:31:57,852 - INFO - Cleaning Documents
+2024-10-23 07:31:58,152 - INFO - Documents Generated Successfully
+2024-10-23 07:31:58,162 - INFO - Collection tenant_1234 created.
+2024-10-23 07:31:58,162 - INFO - Doc type : <class 'list'>
+2024-10-23 07:31:58,374 - ERROR - Error occurred during processing: list index out of range, traceback: Traceback (most recent call last):
+  File "/Users/dev/Documents/integrity_chatbot/main.py", line 92, in upload_pdf_endpoint
+    milvus_manager.insert_data(tenant_id=uuid, data=data_to_insert)
+  File "/Users/dev/Documents/integrity_chatbot/utils/MilvusManager.py", line 88, in insert_data
+    collection.insert(data)
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/pymilvus/orm/collection.py", line 517, in insert
+    entities = Prepare.prepare_data(data, self.schema)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/pymilvus/orm/prepare.py", line 96, in prepare_data
+    elif isinstance(f_data[0], np.ndarray):
+                    ~~~~~~^^^
+IndexError: list index out of range
+
+2024-10-23 07:37:06,139 - INFO - Generating Documents
+2024-10-23 07:37:15,141 - INFO - PDF text extraction failed, skip text extraction...
+2024-10-23 07:37:15,143 - INFO - Document loaded
+2024-10-23 07:37:15,143 - INFO - Cleaning Documents
+2024-10-23 07:37:15,470 - INFO - Documents Generated Successfully
+2024-10-23 07:37:15,479 - INFO - Collection tenant_1234 created.
+2024-10-23 07:37:15,479 - INFO - Doc type : <class 'list'>
+2024-10-23 07:37:15,700 - ERROR - Error occurred during processing: <DataNotMatchException: (code=1, message=The data don't match with schema fields, expect 2 list, got 3)>, traceback: Traceback (most recent call last):
+  File "/Users/dev/Documents/integrity_chatbot/main.py", line 105, in upload_pdf_endpoint
+    milvus_manager.insert_data(tenant_id=uuid, data=data_to_insert)
+  File "/Users/dev/Documents/integrity_chatbot/utils/MilvusManager.py", line 88, in insert_data
+    collection.insert(data)
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/pymilvus/orm/collection.py", line 516, in insert
+    check_insert_schema(self.schema, data)
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/pymilvus/orm/schema.py", line 522, in check_insert_schema
+    _check_data_schema_cnt(tmp_fields, data)
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/pymilvus/orm/schema.py", line 496, in _check_data_schema_cnt
+    raise DataNotMatchException(message=message)
+pymilvus.exceptions.DataNotMatchException: <DataNotMatchException: (code=1, message=The data don't match with schema fields, expect 2 list, got 3)>
+
+2024-10-23 07:38:13,423 - INFO - Generating Documents
+2024-10-23 07:38:20,076 - INFO - PDF text extraction failed, skip text extraction...
+2024-10-23 07:38:20,078 - INFO - Document loaded
+2024-10-23 07:38:20,078 - INFO - Cleaning Documents
+2024-10-23 07:38:20,384 - INFO - Documents Generated Successfully
+2024-10-23 07:38:20,392 - INFO - Collection tenant_1234 created.
+2024-10-23 07:38:20,392 - INFO - Doc type : <class 'list'>
+2024-10-23 07:38:20,609 - ERROR - Error occurred during processing: list index out of range, traceback: Traceback (most recent call last):
+  File "/Users/dev/Documents/integrity_chatbot/main.py", line 105, in upload_pdf_endpoint
+    milvus_manager.insert_data(tenant_id=uuid, data=data_to_insert)
+  File "/Users/dev/Documents/integrity_chatbot/utils/MilvusManager.py", line 88, in insert_data
+    collection.insert(data)
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/pymilvus/orm/collection.py", line 517, in insert
+    entities = Prepare.prepare_data(data, self.schema)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/pymilvus/orm/prepare.py", line 96, in prepare_data
+    elif isinstance(f_data[0], np.ndarray):
+                    ~~~~~~^^^
+IndexError: list index out of range
+
+2024-10-23 07:45:53,545 - INFO - Generating Documents
+2024-10-23 07:46:01,043 - INFO - PDF text extraction failed, skip text extraction...
+2024-10-23 07:46:01,046 - INFO - Document loaded
+2024-10-23 07:46:01,046 - INFO - Cleaning Documents
+2024-10-23 07:46:01,342 - INFO - Documents Generated Successfully
+2024-10-23 07:46:01,352 - INFO - Collection tenant_1234 created.
+2024-10-23 07:46:01,352 - INFO - Doc type : <class 'list'>
+2024-10-23 07:46:01,558 - ERROR - Error occurred during processing: <DataNotMatchException: (code=1, message=The data don't match with schema fields, expect 2 list, got 3)>, traceback: Traceback (most recent call last):
+  File "/Users/dev/Documents/integrity_chatbot/main.py", line 108, in upload_pdf_endpoint
+    milvus_manager.insert_data(tenant_id=uuid, data=data_to_insert)
+  File "/Users/dev/Documents/integrity_chatbot/utils/MilvusManager.py", line 88, in insert_data
+    collection.insert(data)
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/pymilvus/orm/collection.py", line 516, in insert
+    check_insert_schema(self.schema, data)
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/pymilvus/orm/schema.py", line 522, in check_insert_schema
+    _check_data_schema_cnt(tmp_fields, data)
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/pymilvus/orm/schema.py", line 496, in _check_data_schema_cnt
+    raise DataNotMatchException(message=message)
+pymilvus.exceptions.DataNotMatchException: <DataNotMatchException: (code=1, message=The data don't match with schema fields, expect 2 list, got 3)>
+
+2024-10-23 07:47:22,687 - INFO - Generating Documents
+2024-10-23 07:47:28,295 - INFO - PDF text extraction failed, skip text extraction...
+2024-10-23 07:47:28,298 - INFO - Document loaded
+2024-10-23 07:47:28,298 - INFO - Cleaning Documents
+2024-10-23 07:47:28,692 - INFO - Documents Generated Successfully
+2024-10-23 07:47:28,701 - INFO - Collection tenant_1234 created.
+2024-10-23 07:47:28,701 - INFO - Doc type : []
+2024-10-23 07:47:28,905 - ERROR - Error occurred during processing: <DataNotMatchException: (code=1, message=The data don't match with schema fields, expect 2 list, got 3)>, traceback: Traceback (most recent call last):
+  File "/Users/dev/Documents/integrity_chatbot/main.py", line 108, in upload_pdf_endpoint
+    milvus_manager.insert_data(tenant_id=uuid, data=data_to_insert)
+  File "/Users/dev/Documents/integrity_chatbot/utils/MilvusManager.py", line 88, in insert_data
+    collection.insert(data)
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/pymilvus/orm/collection.py", line 516, in insert
+    check_insert_schema(self.schema, data)
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/pymilvus/orm/schema.py", line 522, in check_insert_schema
+    _check_data_schema_cnt(tmp_fields, data)
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/pymilvus/orm/schema.py", line 496, in _check_data_schema_cnt
+    raise DataNotMatchException(message=message)
+pymilvus.exceptions.DataNotMatchException: <DataNotMatchException: (code=1, message=The data don't match with schema fields, expect 2 list, got 3)>
+
+2024-10-23 07:50:23,684 - INFO - Generating Documents
+2024-10-23 07:50:23,798 - INFO - Cleaning Documents
+2024-10-23 07:50:24,215 - INFO - Documents Generated Successfully
+2024-10-23 07:50:24,224 - INFO - Collection tenant_1234 created.
+2024-10-23 07:50:24,224 - INFO - Doc type : [Document(metadata={'page_number': 1, 'file_name': 'Assignment 1 Credit Risk Prediction (1) (1)'}, page_content='senior ai engineer assignment \nassignment 1 : credit risk prediction \nconfidential page 1 of 2 \n 1 objective \n \ndevelop a machine learning model to predict credit risk using a publicly available dataset . \n \n2 backgrou nd \n \ncredit risk assessment is vital in the financial sector , determining the likelihood of a loan applicant \ndefaulting on their loan . this project involves building a model that predicts this risk based on various \nfinancial and demographic factors . \n \n3 dataset \n \nuse the german credit data from the uci machine learning repository . this dataset includes \nattributes like credit history , loan amount , job status , and others , along with a classification of the \nindividuals credit risk . dataset link : german credit data at uci \n \n4 tasks \n \n1 data preprocessin g \na . handle missing values and anomalies in the dataset . \nb . normalize or standardize the numerical features if necessary . \n2 exploratory data analysis eda \na . analyse the distributions of key variables . \nb . identify patterns , outliers , and relationships between features . \n3 feature engineering \na . derive new features that might improve the models performance . \nb . perform feature selection to identify the most important variables for predicting \ncredit risk . \n4 model development'), Document(metadata={'page_number': 1, 'file_name': 'Assignment 1 Credit Risk Prediction (1) (1)'}, page_content='b . perform feature selection to identify the most important variables for predicting \ncredit risk . \n4 model development \na . implement at least two machine learning models for classification e . g . , logistic \nregression , decision tree , random forest , svm , or neural networks . \nb . evaluate and compare their performance using appropriate metrics e . g . , accuracy , \nprecision , recall , f1 score , roc - auc . \n5 model tuning and validation \na . fine - tune the hyperparameters of the models to improve performance . \nb . validate the model using cross - validation or a hold - out method to ensure its \nrobustness . \n6 interpretation and conclusion \na . interpret the model results and explain the models predictions . \nb . provide insights and recommendations based on the models findings . \n \n5 deliverables \n \n1 a report containing : \na . an overview of the data preprocessing and eda process . \nb . a explanation of the feature engineering steps and the rationale behind them . \nc . an assessment of the model s performance , including metrics and validation \nmethods used . \nd . interpretation of the models results and any insights gained from the analysis . \n2 source code for the analysis , model development , and evaluation .'), Document(metadata={'page_number': 2, 'file_name': 'Assignment 1 Credit Risk Prediction (1) (1)'}, page_content='senior ai engineer assignment \nassignment 1 : credit risk prediction \nconfidential page 2 of 2 \n \n6 evaluation criteria \n \n1 technical accuracy : correct implementation of data preprocessing , feature engineering , model \ndevelopment , and evaluation . \n2 analytical skills : ability to derive insights from the data and effectively communicate the \nresults . \n3 code quality : cleanliness , organization , and documentation of the code . \n4 innovation : creativity in feature engineering , model selection , and gaining insights from the \ndata . \n \n7 time frame \n \nyou have 5 days from the receipt of this assignment to submit your design . late submissions will not be \nconsidered . \n \n \n _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _')]
+2024-10-23 07:50:24,440 - ERROR - Error occurred during processing: expected string or buffer, traceback: Traceback (most recent call last):
+  File "/Users/dev/Documents/integrity_chatbot/main.py", line 85, in upload_pdf_endpoint
+    embedded_docs = openai_embeddings.embed_documents(docs)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/langchain_community/embeddings/openai.py", line 671, in embed_documents
+    return self._get_len_safe_embeddings(texts, engine=engine)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/langchain_community/embeddings/openai.py", line 474, in _get_len_safe_embeddings
+    token = encoding.encode(
+            ^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/tiktoken/core.py", line 116, in encode
+    if match := _special_token_regex(disallowed_special).search(text):
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: expected string or buffer
+
+2024-10-23 07:50:28,488 - INFO - Generating Documents
+2024-10-23 07:50:28,594 - INFO - Cleaning Documents
+2024-10-23 07:50:28,598 - INFO - Documents Generated Successfully
+2024-10-23 07:50:28,608 - INFO - Collection tenant_1234 created.
+2024-10-23 07:50:28,608 - INFO - Doc type : [Document(metadata={'page_number': 1, 'file_name': 'Assignment 1 Credit Risk Prediction (1) (1)'}, page_content='senior ai engineer assignment \nassignment 1 : credit risk prediction \nconfidential page 1 of 2 \n 1 objective \n \ndevelop a machine learning model to predict credit risk using a publicly available dataset . \n \n2 backgrou nd \n \ncredit risk assessment is vital in the financial sector , determining the likelihood of a loan applicant \ndefaulting on their loan . this project involves building a model that predicts this risk based on various \nfinancial and demographic factors . \n \n3 dataset \n \nuse the german credit data from the uci machine learning repository . this dataset includes \nattributes like credit history , loan amount , job status , and others , along with a classification of the \nindividuals credit risk . dataset link : german credit data at uci \n \n4 tasks \n \n1 data preprocessin g \na . handle missing values and anomalies in the dataset . \nb . normalize or standardize the numerical features if necessary . \n2 exploratory data analysis eda \na . analyse the distributions of key variables . \nb . identify patterns , outliers , and relationships between features . \n3 feature engineering \na . derive new features that might improve the models performance . \nb . perform feature selection to identify the most important variables for predicting \ncredit risk . \n4 model development'), Document(metadata={'page_number': 1, 'file_name': 'Assignment 1 Credit Risk Prediction (1) (1)'}, page_content='b . perform feature selection to identify the most important variables for predicting \ncredit risk . \n4 model development \na . implement at least two machine learning models for classification e . g . , logistic \nregression , decision tree , random forest , svm , or neural networks . \nb . evaluate and compare their performance using appropriate metrics e . g . , accuracy , \nprecision , recall , f1 score , roc - auc . \n5 model tuning and validation \na . fine - tune the hyperparameters of the models to improve performance . \nb . validate the model using cross - validation or a hold - out method to ensure its \nrobustness . \n6 interpretation and conclusion \na . interpret the model results and explain the models predictions . \nb . provide insights and recommendations based on the models findings . \n \n5 deliverables \n \n1 a report containing : \na . an overview of the data preprocessing and eda process . \nb . a explanation of the feature engineering steps and the rationale behind them . \nc . an assessment of the model s performance , including metrics and validation \nmethods used . \nd . interpretation of the models results and any insights gained from the analysis . \n2 source code for the analysis , model development , and evaluation .'), Document(metadata={'page_number': 2, 'file_name': 'Assignment 1 Credit Risk Prediction (1) (1)'}, page_content='senior ai engineer assignment \nassignment 1 : credit risk prediction \nconfidential page 2 of 2 \n \n6 evaluation criteria \n \n1 technical accuracy : correct implementation of data preprocessing , feature engineering , model \ndevelopment , and evaluation . \n2 analytical skills : ability to derive insights from the data and effectively communicate the \nresults . \n3 code quality : cleanliness , organization , and documentation of the code . \n4 innovation : creativity in feature engineering , model selection , and gaining insights from the \ndata . \n \n7 time frame \n \nyou have 5 days from the receipt of this assignment to submit your design . late submissions will not be \nconsidered . \n \n \n _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _')]
+2024-10-23 07:50:28,608 - ERROR - Error occurred during processing: expected string or buffer, traceback: Traceback (most recent call last):
+  File "/Users/dev/Documents/integrity_chatbot/main.py", line 85, in upload_pdf_endpoint
+    embedded_docs = openai_embeddings.embed_documents(docs)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/langchain_community/embeddings/openai.py", line 671, in embed_documents
+    return self._get_len_safe_embeddings(texts, engine=engine)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/langchain_community/embeddings/openai.py", line 474, in _get_len_safe_embeddings
+    token = encoding.encode(
+            ^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/tiktoken/core.py", line 116, in encode
+    if match := _special_token_regex(disallowed_special).search(text):
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: expected string or buffer
+
+2024-10-23 07:50:29,692 - INFO - Generating Documents
+2024-10-23 07:50:29,800 - INFO - Cleaning Documents
+2024-10-23 07:50:29,803 - INFO - Documents Generated Successfully
+2024-10-23 07:50:29,812 - INFO - Collection tenant_1234 created.
+2024-10-23 07:50:29,812 - INFO - Doc type : [Document(metadata={'page_number': 1, 'file_name': 'Assignment 1 Credit Risk Prediction (1) (1)'}, page_content='senior ai engineer assignment \nassignment 1 : credit risk prediction \nconfidential page 1 of 2 \n 1 objective \n \ndevelop a machine learning model to predict credit risk using a publicly available dataset . \n \n2 backgrou nd \n \ncredit risk assessment is vital in the financial sector , determining the likelihood of a loan applicant \ndefaulting on their loan . this project involves building a model that predicts this risk based on various \nfinancial and demographic factors . \n \n3 dataset \n \nuse the german credit data from the uci machine learning repository . this dataset includes \nattributes like credit history , loan amount , job status , and others , along with a classification of the \nindividuals credit risk . dataset link : german credit data at uci \n \n4 tasks \n \n1 data preprocessin g \na . handle missing values and anomalies in the dataset . \nb . normalize or standardize the numerical features if necessary . \n2 exploratory data analysis eda \na . analyse the distributions of key variables . \nb . identify patterns , outliers , and relationships between features . \n3 feature engineering \na . derive new features that might improve the models performance . \nb . perform feature selection to identify the most important variables for predicting \ncredit risk . \n4 model development'), Document(metadata={'page_number': 1, 'file_name': 'Assignment 1 Credit Risk Prediction (1) (1)'}, page_content='b . perform feature selection to identify the most important variables for predicting \ncredit risk . \n4 model development \na . implement at least two machine learning models for classification e . g . , logistic \nregression , decision tree , random forest , svm , or neural networks . \nb . evaluate and compare their performance using appropriate metrics e . g . , accuracy , \nprecision , recall , f1 score , roc - auc . \n5 model tuning and validation \na . fine - tune the hyperparameters of the models to improve performance . \nb . validate the model using cross - validation or a hold - out method to ensure its \nrobustness . \n6 interpretation and conclusion \na . interpret the model results and explain the models predictions . \nb . provide insights and recommendations based on the models findings . \n \n5 deliverables \n \n1 a report containing : \na . an overview of the data preprocessing and eda process . \nb . a explanation of the feature engineering steps and the rationale behind them . \nc . an assessment of the model s performance , including metrics and validation \nmethods used . \nd . interpretation of the models results and any insights gained from the analysis . \n2 source code for the analysis , model development , and evaluation .'), Document(metadata={'page_number': 2, 'file_name': 'Assignment 1 Credit Risk Prediction (1) (1)'}, page_content='senior ai engineer assignment \nassignment 1 : credit risk prediction \nconfidential page 2 of 2 \n \n6 evaluation criteria \n \n1 technical accuracy : correct implementation of data preprocessing , feature engineering , model \ndevelopment , and evaluation . \n2 analytical skills : ability to derive insights from the data and effectively communicate the \nresults . \n3 code quality : cleanliness , organization , and documentation of the code . \n4 innovation : creativity in feature engineering , model selection , and gaining insights from the \ndata . \n \n7 time frame \n \nyou have 5 days from the receipt of this assignment to submit your design . late submissions will not be \nconsidered . \n \n \n _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _')]
+2024-10-23 07:50:29,812 - ERROR - Error occurred during processing: expected string or buffer, traceback: Traceback (most recent call last):
+  File "/Users/dev/Documents/integrity_chatbot/main.py", line 85, in upload_pdf_endpoint
+    embedded_docs = openai_embeddings.embed_documents(docs)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/langchain_community/embeddings/openai.py", line 671, in embed_documents
+    return self._get_len_safe_embeddings(texts, engine=engine)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/langchain_community/embeddings/openai.py", line 474, in _get_len_safe_embeddings
+    token = encoding.encode(
+            ^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/tiktoken/core.py", line 116, in encode
+    if match := _special_token_regex(disallowed_special).search(text):
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: expected string or buffer
+
+2024-10-23 07:53:19,657 - INFO - Generating Documents
+2024-10-23 07:53:19,760 - INFO - Cleaning Documents
+2024-10-23 07:53:20,161 - INFO - Documents Generated Successfully
+2024-10-23 07:53:20,171 - INFO - Collection tenant_1234 created.
+2024-10-23 07:53:20,171 - INFO - Doc type : [Document(metadata={'page_number': 1, 'file_name': 'Assignment 1 Credit Risk Prediction (1) (1)'}, page_content='senior ai engineer assignment \nassignment 1 : credit risk prediction \nconfidential page 1 of 2 \n 1 objective \n \ndevelop a machine learning model to predict credit risk using a publicly available dataset . \n \n2 backgrou nd \n \ncredit risk assessment is vital in the financial sector , determining the likelihood of a loan applicant \ndefaulting on their loan . this project involves building a model that predicts this risk based on various \nfinancial and demographic factors . \n \n3 dataset \n \nuse the german credit data from the uci machine learning repository . this dataset includes \nattributes like credit history , loan amount , job status , and others , along with a classification of the \nindividuals credit risk . dataset link : german credit data at uci \n \n4 tasks \n \n1 data preprocessin g \na . handle missing values and anomalies in the dataset . \nb . normalize or standardize the numerical features if necessary . \n2 exploratory data analysis eda \na . analyse the distributions of key variables . \nb . identify patterns , outliers , and relationships between features . \n3 feature engineering \na . derive new features that might improve the models performance . \nb . perform feature selection to identify the most important variables for predicting \ncredit risk . \n4 model development'), Document(metadata={'page_number': 1, 'file_name': 'Assignment 1 Credit Risk Prediction (1) (1)'}, page_content='b . perform feature selection to identify the most important variables for predicting \ncredit risk . \n4 model development \na . implement at least two machine learning models for classification e . g . , logistic \nregression , decision tree , random forest , svm , or neural networks . \nb . evaluate and compare their performance using appropriate metrics e . g . , accuracy , \nprecision , recall , f1 score , roc - auc . \n5 model tuning and validation \na . fine - tune the hyperparameters of the models to improve performance . \nb . validate the model using cross - validation or a hold - out method to ensure its \nrobustness . \n6 interpretation and conclusion \na . interpret the model results and explain the models predictions . \nb . provide insights and recommendations based on the models findings . \n \n5 deliverables \n \n1 a report containing : \na . an overview of the data preprocessing and eda process . \nb . a explanation of the feature engineering steps and the rationale behind them . \nc . an assessment of the model s performance , including metrics and validation \nmethods used . \nd . interpretation of the models results and any insights gained from the analysis . \n2 source code for the analysis , model development , and evaluation .'), Document(metadata={'page_number': 2, 'file_name': 'Assignment 1 Credit Risk Prediction (1) (1)'}, page_content='senior ai engineer assignment \nassignment 1 : credit risk prediction \nconfidential page 2 of 2 \n \n6 evaluation criteria \n \n1 technical accuracy : correct implementation of data preprocessing , feature engineering , model \ndevelopment , and evaluation . \n2 analytical skills : ability to derive insights from the data and effectively communicate the \nresults . \n3 code quality : cleanliness , organization , and documentation of the code . \n4 innovation : creativity in feature engineering , model selection , and gaining insights from the \ndata . \n \n7 time frame \n \nyou have 5 days from the receipt of this assignment to submit your design . late submissions will not be \nconsidered . \n \n \n _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _')]
+2024-10-23 07:53:21,903 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-10-23 07:53:22,255 - ERROR - Error occurred during processing: <DataNotMatchException: (code=1, message=The data don't match with schema fields, expect 2 list, got 3)>, traceback: Traceback (most recent call last):
+  File "/Users/dev/Documents/integrity_chatbot/main.py", line 108, in upload_pdf_endpoint
+    milvus_manager.insert_data(tenant_id=uuid, data=data_to_insert)
+  File "/Users/dev/Documents/integrity_chatbot/utils/MilvusManager.py", line 88, in insert_data
+    collection.insert(data)
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/pymilvus/orm/collection.py", line 516, in insert
+    check_insert_schema(self.schema, data)
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/pymilvus/orm/schema.py", line 522, in check_insert_schema
+    _check_data_schema_cnt(tmp_fields, data)
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/pymilvus/orm/schema.py", line 496, in _check_data_schema_cnt
+    raise DataNotMatchException(message=message)
+pymilvus.exceptions.DataNotMatchException: <DataNotMatchException: (code=1, message=The data don't match with schema fields, expect 2 list, got 3)>
+
+2024-10-23 07:54:42,057 - INFO - Generating Documents
+2024-10-23 07:54:42,161 - INFO - Cleaning Documents
+2024-10-23 07:54:42,564 - INFO - Documents Generated Successfully
+2024-10-23 07:54:42,575 - INFO - Collection tenant_1234 created.
+2024-10-23 07:54:42,575 - INFO - Doc type : [Document(metadata={'page_number': 1, 'file_name': 'Assignment 1 Credit Risk Prediction (1) (1)'}, page_content='senior ai engineer assignment \nassignment 1 : credit risk prediction \nconfidential page 1 of 2 \n 1 objective \n \ndevelop a machine learning model to predict credit risk using a publicly available dataset . \n \n2 backgrou nd \n \ncredit risk assessment is vital in the financial sector , determining the likelihood of a loan applicant \ndefaulting on their loan . this project involves building a model that predicts this risk based on various \nfinancial and demographic factors . \n \n3 dataset \n \nuse the german credit data from the uci machine learning repository . this dataset includes \nattributes like credit history , loan amount , job status , and others , along with a classification of the \nindividuals credit risk . dataset link : german credit data at uci \n \n4 tasks \n \n1 data preprocessin g \na . handle missing values and anomalies in the dataset . \nb . normalize or standardize the numerical features if necessary . \n2 exploratory data analysis eda \na . analyse the distributions of key variables . \nb . identify patterns , outliers , and relationships between features . \n3 feature engineering \na . derive new features that might improve the models performance . \nb . perform feature selection to identify the most important variables for predicting \ncredit risk . \n4 model development'), Document(metadata={'page_number': 1, 'file_name': 'Assignment 1 Credit Risk Prediction (1) (1)'}, page_content='b . perform feature selection to identify the most important variables for predicting \ncredit risk . \n4 model development \na . implement at least two machine learning models for classification e . g . , logistic \nregression , decision tree , random forest , svm , or neural networks . \nb . evaluate and compare their performance using appropriate metrics e . g . , accuracy , \nprecision , recall , f1 score , roc - auc . \n5 model tuning and validation \na . fine - tune the hyperparameters of the models to improve performance . \nb . validate the model using cross - validation or a hold - out method to ensure its \nrobustness . \n6 interpretation and conclusion \na . interpret the model results and explain the models predictions . \nb . provide insights and recommendations based on the models findings . \n \n5 deliverables \n \n1 a report containing : \na . an overview of the data preprocessing and eda process . \nb . a explanation of the feature engineering steps and the rationale behind them . \nc . an assessment of the model s performance , including metrics and validation \nmethods used . \nd . interpretation of the models results and any insights gained from the analysis . \n2 source code for the analysis , model development , and evaluation .'), Document(metadata={'page_number': 2, 'file_name': 'Assignment 1 Credit Risk Prediction (1) (1)'}, page_content='senior ai engineer assignment \nassignment 1 : credit risk prediction \nconfidential page 2 of 2 \n \n6 evaluation criteria \n \n1 technical accuracy : correct implementation of data preprocessing , feature engineering , model \ndevelopment , and evaluation . \n2 analytical skills : ability to derive insights from the data and effectively communicate the \nresults . \n3 code quality : cleanliness , organization , and documentation of the code . \n4 innovation : creativity in feature engineering , model selection , and gaining insights from the \ndata . \n \n7 time frame \n \nyou have 5 days from the receipt of this assignment to submit your design . late submissions will not be \nconsidered . \n \n \n _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _')]
+2024-10-23 07:54:43,643 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-10-23 07:54:47,642 - INFO - File Assignment 1 Credit Risk Prediction (1) (1) uploaded and processed successfully for UUID 1234.
+2024-10-23 07:59:28,623 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-10-23 07:59:30,198 - ERROR - Error occurred during query: 'Hits' object has no attribute 'entity', traceback: Traceback (most recent call last):
+  File "/Users/dev/Documents/integrity_chatbot/main.py", line 143, in query_documents
+    {"filename": result.entity.get("filename"), "distance": result.distance} for result in results
+                 ^^^^^^^^^^^^^
+AttributeError: 'Hits' object has no attribute 'entity'
+
+2024-10-23 08:01:28,641 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-10-23 08:01:28,899 - INFO - Query executed successfully for UUID 1234.
+2024-10-23 08:06:58,153 - INFO - Generating Documents
+2024-10-23 08:06:58,265 - INFO - Cleaning Documents
+2024-10-23 08:06:58,739 - INFO - Documents Generated Successfully
+2024-10-23 08:06:58,787 - INFO - Collection tenant_12345 created.
+2024-10-23 08:06:58,787 - INFO - file name : Assignment 1 Credit Risk Prediction (1)
+2024-10-23 08:07:00,745 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-10-23 08:07:05,395 - INFO - File Assignment 1 Credit Risk Prediction (1) uploaded and processed successfully for UUID 12345.
+2024-10-23 08:07:17,204 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-10-23 08:07:18,897 - INFO - Query executed successfully for UUID 12345.
+2024-10-23 08:10:51,468 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-10-23 08:24:34,275 - INFO - Generating Documents
+2024-10-23 08:24:34,596 - INFO - Cleaning Documents
+2024-10-23 08:24:34,931 - INFO - Documents Generated Successfully
+2024-10-23 08:24:34,951 - ERROR - Error occurred during processing: <SchemaNotReadyException: (code=1, message=The collection already exist, but the schema is not the same as the schema passed in.)>, traceback: Traceback (most recent call last):
+  File "/Users/dev/Documents/integrity_chatbot/main.py", line 81, in upload_pdf_endpoint
+    milvus_manager.create_tenant_collection(tenant_id=uuid, fields=fields)
+  File "/Users/dev/Documents/integrity_chatbot/utils/MilvusManager.py", line 39, in create_tenant_collection
+    collection = Collection(name=collection_name, schema=schema)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/pymilvus/orm/collection.py", line 135, in __init__
+    raise SchemaNotReadyException(message=ExceptionsMessage.SchemaInconsistent)
+pymilvus.exceptions.SchemaNotReadyException: <SchemaNotReadyException: (code=1, message=The collection already exist, but the schema is not the same as the schema passed in.)>
+
+2024-10-23 12:17:39,050 - INFO - Collection tenant_c42fd602_8eba_4157_b752_9511ded6c495 created.
+2024-10-23 12:18:24,282 - INFO - Generating Documents
+2024-10-23 12:18:24,541 - INFO - Cleaning Documents
+2024-10-23 12:18:24,912 - INFO - Documents Generated Successfully
+2024-10-23 12:18:24,913 - INFO - file name : Muhammad Saad Naveed CV (1)
+2024-10-23 12:18:29,253 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-10-23 12:18:33,908 - INFO - File Muhammad Saad Naveed CV (1) uploaded and processed successfully for UUID c42fd602-8eba-4157-b752-9511ded6c495.
+2024-10-23 12:19:10,310 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-10-23 12:33:22,848 - INFO - Generating Documents
+2024-10-23 12:33:22,961 - INFO - Cleaning Documents
+2024-10-23 12:33:23,391 - INFO - Documents Generated Successfully
+2024-10-23 12:33:23,392 - INFO - file name : Assignment 1 Credit Risk Prediction (1) (1)
+2024-10-23 12:33:27,766 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-10-23 12:33:31,605 - INFO - File Assignment 1 Credit Risk Prediction (1) (1) uploaded and processed successfully for UUID c42fd602-8eba-4157-b752-9511ded6c495.
+2024-10-23 12:33:52,099 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-10-23 12:44:22,470 - INFO - Collection tenant_102c215e_e5fb_415e_a4fe_0dbe0209e25a created.
+2024-10-23 12:44:54,561 - INFO - Generating Documents
+2024-10-23 12:44:54,839 - INFO - Cleaning Documents
+2024-10-23 12:44:55,186 - INFO - Documents Generated Successfully
+2024-10-23 12:44:55,187 - INFO - file name : Muhammad Saad Naveed CV (1)
+2024-10-23 12:44:56,606 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-10-23 12:45:00,809 - INFO - File Muhammad Saad Naveed CV (1) uploaded and processed successfully for UUID 102c215e-e5fb-415e-a4fe-0dbe0209e25a.
+2024-10-23 12:45:16,926 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-10-23 12:45:27,246 - ERROR - RPC error: [query], <MilvusException: (code=1100, message=empty expression should be used with limit: invalid parameter)>, <Time:{'RPC start': '2024-10-23 12:45:27.222324', 'RPC error': '2024-10-23 12:45:27.246191'}>
+2024-10-23 12:45:27,246 - ERROR - Error while listing files: <MilvusException: (code=1100, message=empty expression should be used with limit: invalid parameter)>
+2024-10-23 12:45:27,246 - ERROR - Error occurred while listing files: Error while listing files: <MilvusException: (code=1100, message=empty expression should be used with limit: invalid parameter)>
+2024-10-23 12:47:14,434 - INFO - Files listed successfully for UUID 102c215e-e5fb-415e-a4fe-0dbe0209e25a.
+2024-10-23 12:47:56,956 - INFO - Generating Documents
+2024-10-23 12:47:57,067 - INFO - Cleaning Documents
+2024-10-23 12:47:57,507 - INFO - Documents Generated Successfully
+2024-10-23 12:47:57,508 - INFO - file name : Assignment 1 Credit Risk Prediction (1) (1)
+2024-10-23 12:47:58,618 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-10-23 12:48:02,756 - INFO - File Assignment 1 Credit Risk Prediction (1) (1) uploaded and processed successfully for UUID 102c215e-e5fb-415e-a4fe-0dbe0209e25a.
+2024-10-23 12:48:15,035 - INFO - Files listed successfully for UUID 102c215e-e5fb-415e-a4fe-0dbe0209e25a.
+2024-10-23 12:50:30,782 - INFO - Files listed successfully for UUID 102c215e-e5fb-415e-a4fe-0dbe0209e25a.
+2024-10-23 12:51:01,323 - INFO - File 'Muhammad Saad Naveed CV (1)' deleted successfully for UUID 102c215e-e5fb-415e-a4fe-0dbe0209e25a.
+2024-10-23 12:51:18,349 - INFO - Files listed successfully for UUID 102c215e-e5fb-415e-a4fe-0dbe0209e25a.
+2024-10-24 04:39:25,011 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-10-24 04:39:27,212 - INFO - HTTP Request: POST https://api.openai.com/v1/completions "HTTP/1.1 200 OK"
+2024-10-24 04:40:05,426 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-10-24 04:40:08,183 - INFO - HTTP Request: POST https://api.openai.com/v1/completions "HTTP/1.1 200 OK"
+2024-10-24 04:41:26,523 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-10-24 04:41:28,329 - INFO - HTTP Request: POST https://api.openai.com/v1/completions "HTTP/1.1 200 OK"
+2024-10-24 04:41:37,521 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-10-24 04:41:38,707 - INFO - HTTP Request: POST https://api.openai.com/v1/completions "HTTP/1.1 200 OK"
+2024-10-24 04:58:24,395 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 401 Unauthorized"
+2024-10-24 04:58:24,405 - ERROR - Error occurred during query: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-svcac*****************************************************************************************************************************************TsAJ. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}, traceback: Traceback (most recent call last):
+  File "/Users/dev/Documents/integrity_chatbot/main.py", line 192, in query_documents
+    query_embedding = openai_embeddings.embed_query(query)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/langchain_community/embeddings/openai.py", line 700, in embed_query
+    return self.embed_documents([text])[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/langchain_community/embeddings/openai.py", line 671, in embed_documents
+    return self._get_len_safe_embeddings(texts, engine=engine)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/langchain_community/embeddings/openai.py", line 497, in _get_len_safe_embeddings
+    response = embed_with_retry(
+               ^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/langchain_community/embeddings/openai.py", line 120, in embed_with_retry
+    return embeddings.client.create(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/openai/resources/embeddings.py", line 124, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/openai/_base_client.py", line 1277, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/openai/_base_client.py", line 954, in request
+    return self._request(
+           ^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/openai/_base_client.py", line 1058, in _request
+    raise self._make_status_error_from_response(err.response) from None
+openai.AuthenticationError: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-svcac*****************************************************************************************************************************************TsAJ. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+
+2024-10-24 05:02:39,900 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-10-24 05:02:40,471 - ERROR - Error occurred while calling OpenAI LLM: Got unknown type C
+2024-10-24 05:02:40,477 - ERROR - Error occurred during query: , traceback: Traceback (most recent call last):
+  File "/Users/dev/Documents/integrity_chatbot/main.py", line 167, in call_openai_llm_via_langchain
+    response = llm(prompt_text)
+               ^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/langchain_core/_api/deprecation.py", line 182, in warning_emitting_wrapper
+    return wrapped(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/langchain_core/language_models/chat_models.py", line 1017, in __call__
+    generation = self.generate(
+                 ^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/langchain_core/language_models/chat_models.py", line 643, in generate
+    raise e
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/langchain_core/language_models/chat_models.py", line 633, in generate
+    self._generate_with_cache(
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/langchain_core/language_models/chat_models.py", line 851, in _generate_with_cache
+    result = self._generate(
+             ^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/langchain_community/chat_models/openai.py", line 469, in _generate
+    message_dicts, params = self._create_message_dicts(messages, stop)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/langchain_community/chat_models/openai.py", line 488, in _create_message_dicts
+    message_dicts = [convert_message_to_dict(m) for m in messages]
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/langchain_community/adapters/openai.py", line 153, in convert_message_to_dict
+    raise TypeError(f"Got unknown type {message}")
+TypeError: Got unknown type C
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dev/Documents/integrity_chatbot/main.py", line 203, in query_documents
+    llm_response = await call_openai_llm_via_langchain(query, context)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/main.py", line 174, in call_openai_llm_via_langchain
+    raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail="LLM call failed.")
+fastapi.exceptions.HTTPException
+
+2024-10-24 05:05:29,600 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-10-24 05:05:36,719 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-10-24 05:05:36,744 - ERROR - Error occurred while calling OpenAI LLM: 'AIMessage' object has no attribute 'strip'
+2024-10-24 05:05:36,749 - ERROR - Error occurred during query: , traceback: Traceback (most recent call last):
+  File "/Users/dev/Documents/integrity_chatbot/main.py", line 178, in call_openai_llm_via_langchain
+    return response.strip()
+           ^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/pydantic/main.py", line 856, in __getattr__
+    raise AttributeError(f'{type(self).__name__!r} object has no attribute {item!r}')
+AttributeError: 'AIMessage' object has no attribute 'strip'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dev/Documents/integrity_chatbot/main.py", line 211, in query_documents
+    llm_response = await call_openai_llm_via_langchain(query, context)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/main.py", line 182, in call_openai_llm_via_langchain
+    raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail="LLM call failed.")
+fastapi.exceptions.HTTPException
+
+2024-10-24 05:07:38,091 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-10-24 05:07:46,943 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-10-24 05:12:51,892 - INFO - Collection tenant_7fd4e9c9_042b_4fce_bede_1b55bb906abd created.
+2024-10-24 05:13:16,504 - INFO - Generating Documents
+2024-10-24 05:13:16,893 - INFO - Cleaning Documents
+2024-10-24 05:13:17,373 - INFO - Documents Generated Successfully
+2024-10-24 05:13:17,375 - INFO - file name : Muhammad Saad Naveed CV (1)
+2024-10-24 05:13:22,270 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-10-24 05:13:22,492 - ERROR - RPC error: [load_collection], <MilvusException: (code=700, message=index not found[collection=tenant_7fd4e9c9_042b_4fce_bede_1b55bb906abd])>, <Time:{'RPC start': '2024-10-24 05:13:22.480984', 'RPC error': '2024-10-24 05:13:22.492778'}>
+2024-10-24 05:13:22,498 - ERROR - Error occurred during processing: <MilvusException: (code=700, message=index not found[collection=tenant_7fd4e9c9_042b_4fce_bede_1b55bb906abd])>, traceback: Traceback (most recent call last):
+  File "/Users/dev/Documents/integrity_chatbot/main.py", line 117, in upload_pdf_endpoint
+    if milvus_manager.filename_exists(tenant_id=uuid, filename=file_name):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/utils/MilvusManager.py", line 67, in filename_exists
+    collection.load()
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/pymilvus/orm/collection.py", line 429, in load
+    conn.load_collection(
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/pymilvus/decorators.py", line 148, in handler
+    raise e from e
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/pymilvus/decorators.py", line 144, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/pymilvus/decorators.py", line 183, in handler
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/pymilvus/decorators.py", line 123, in handler
+    raise e from e
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/pymilvus/decorators.py", line 87, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/pymilvus/client/grpc_handler.py", line 1166, in load_collection
+    check_status(response)
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/pymilvus/client/utils.py", line 63, in check_status
+    raise MilvusException(status.code, status.reason, status.error_code)
+pymilvus.exceptions.MilvusException: <MilvusException: (code=700, message=index not found[collection=tenant_7fd4e9c9_042b_4fce_bede_1b55bb906abd])>
+
+2024-10-24 05:14:23,698 - INFO - Generating Documents
+2024-10-24 05:14:23,923 - INFO - Cleaning Documents
+2024-10-24 05:14:23,928 - INFO - Documents Generated Successfully
+2024-10-24 05:14:23,929 - INFO - file name : Muhammad Saad Naveed CV (1)
+2024-10-24 05:14:25,803 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-10-24 05:14:26,141 - ERROR - RPC error: [load_collection], <MilvusException: (code=700, message=index not found[collection=tenant_7fd4e9c9_042b_4fce_bede_1b55bb906abd])>, <Time:{'RPC start': '2024-10-24 05:14:26.110184', 'RPC error': '2024-10-24 05:14:26.141053'}>
+2024-10-24 05:14:26,142 - ERROR - Error occurred during processing: <MilvusException: (code=700, message=index not found[collection=tenant_7fd4e9c9_042b_4fce_bede_1b55bb906abd])>, traceback: Traceback (most recent call last):
+  File "/Users/dev/Documents/integrity_chatbot/main.py", line 117, in upload_pdf_endpoint
+    if milvus_manager.filename_exists(tenant_id=uuid, filename=file_name):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/utils/MilvusManager.py", line 67, in filename_exists
+    collection.load()
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/pymilvus/orm/collection.py", line 429, in load
+    conn.load_collection(
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/pymilvus/decorators.py", line 148, in handler
+    raise e from e
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/pymilvus/decorators.py", line 144, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/pymilvus/decorators.py", line 183, in handler
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/pymilvus/decorators.py", line 123, in handler
+    raise e from e
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/pymilvus/decorators.py", line 87, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/pymilvus/client/grpc_handler.py", line 1166, in load_collection
+    check_status(response)
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/pymilvus/client/utils.py", line 63, in check_status
+    raise MilvusException(status.code, status.reason, status.error_code)
+pymilvus.exceptions.MilvusException: <MilvusException: (code=700, message=index not found[collection=tenant_7fd4e9c9_042b_4fce_bede_1b55bb906abd])>
+
+2024-10-24 05:20:36,490 - INFO - Generating Documents
+2024-10-24 05:20:36,958 - INFO - Cleaning Documents
+2024-10-24 05:20:37,548 - INFO - Documents Generated Successfully
+2024-10-24 05:20:37,550 - INFO - file name : Muhammad Saad Naveed CV (1)
+2024-10-24 05:20:39,543 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-10-24 05:20:39,873 - ERROR - RPC error: [load_collection], <MilvusException: (code=700, message=index not found[collection=tenant_7fd4e9c9_042b_4fce_bede_1b55bb906abd])>, <Time:{'RPC start': '2024-10-24 05:20:39.867771', 'RPC error': '2024-10-24 05:20:39.872871'}>
+2024-10-24 05:20:39,877 - ERROR - Error occurred during processing: <MilvusException: (code=700, message=index not found[collection=tenant_7fd4e9c9_042b_4fce_bede_1b55bb906abd])>, traceback: Traceback (most recent call last):
+  File "/Users/dev/Documents/integrity_chatbot/main.py", line 117, in upload_pdf_endpoint
+    if milvus_manager.filename_exists(tenant_id=uuid, filename=file_name):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/utils/MilvusManager.py", line 67, in filename_exists
+    collection.load()
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/pymilvus/orm/collection.py", line 429, in load
+    conn.load_collection(
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/pymilvus/decorators.py", line 148, in handler
+    raise e from e
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/pymilvus/decorators.py", line 144, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/pymilvus/decorators.py", line 183, in handler
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/pymilvus/decorators.py", line 123, in handler
+    raise e from e
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/pymilvus/decorators.py", line 87, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/pymilvus/client/grpc_handler.py", line 1166, in load_collection
+    check_status(response)
+  File "/Users/dev/Documents/integrity_chatbot/venv/lib/python3.12/site-packages/pymilvus/client/utils.py", line 63, in check_status
+    raise MilvusException(status.code, status.reason, status.error_code)
+pymilvus.exceptions.MilvusException: <MilvusException: (code=700, message=index not found[collection=tenant_7fd4e9c9_042b_4fce_bede_1b55bb906abd])>
+
+2024-10-24 05:20:51,809 - INFO - Generating Documents
+2024-10-24 05:20:52,199 - INFO - Cleaning Documents
+2024-10-24 05:20:52,734 - INFO - Documents Generated Successfully
+2024-10-24 05:20:52,735 - INFO - file name : Muhammad Saad Naveed CV (1)
+2024-10-24 05:20:54,375 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-10-24 05:20:58,874 - INFO - File Muhammad Saad Naveed CV (1) uploaded and processed successfully for UUID 7fd4e9c9-042b-4fce-bede-1b55bb906abd.
+2024-10-24 05:22:08,600 - INFO - Generating Documents
+2024-10-24 05:22:09,061 - INFO - Cleaning Documents
+2024-10-24 05:22:09,603 - INFO - Documents Generated Successfully
+2024-10-24 05:22:09,605 - INFO - file name : Muhammad Saad Naveed CV (1)
+2024-10-24 05:22:13,737 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-10-24 05:22:15,661 - ERROR - Filename 'Muhammad Saad Naveed CV (1)' already exists. Upload aborted.
+2024-10-24 05:22:15,662 - ERROR - Error occurred during processing: , traceback: Traceback (most recent call last):
+  File "/Users/dev/Documents/integrity_chatbot/main.py", line 120, in upload_pdf_endpoint
+    raise HTTPException(status_code=status.HTTP_409_CONFLICT, detail=error_msg)
+fastapi.exceptions.HTTPException
+
+2024-10-24 05:24:53,636 - INFO - Generating Documents
+2024-10-24 05:24:53,995 - INFO - Cleaning Documents
+2024-10-24 05:24:54,476 - INFO - Documents Generated Successfully
+2024-10-24 05:24:54,478 - INFO - file name : Muhammad Saad Naveed CV (1)
+2024-10-24 05:24:55,532 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-10-24 05:25:36,445 - INFO - Generating Documents
+2024-10-24 05:25:36,588 - INFO - Cleaning Documents
+2024-10-24 05:25:36,592 - INFO - Documents Generated Successfully
+2024-10-24 05:25:36,594 - INFO - file name : Assignment 1 Credit Risk Prediction (1) (1)
+2024-10-24 05:25:38,028 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-10-24 05:25:42,208 - INFO - File Assignment 1 Credit Risk Prediction (1) (1) uploaded and processed successfully for UUID 7fd4e9c9-042b-4fce-bede-1b55bb906abd.
+2024-10-24 05:26:43,037 - INFO - Files listed successfully for UUID 7fd4e9c9-042b-4fce-bede-1b55bb906abd.
+2024-10-24 05:27:34,459 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-10-24 05:27:40,715 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-10-24 06:02:49,849 - INFO - Collection tenant_d27bc2af_e336_45da_a32d_3459762c905d created.
+2024-10-24 06:09:22,634 - INFO - Generating Documents
+2024-10-24 06:09:27,391 - INFO - Cleaning Documents
+2024-10-24 06:09:27,545 - INFO - Documents Generated Successfully
+2024-10-24 06:09:27,545 - INFO - file name : GSK Policy Template Simple Style updated 8 Aug 2019
+2024-10-24 06:09:28,972 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-10-24 06:09:34,000 - INFO - File GSK Policy Template Simple Style updated 8 Aug 2019 uploaded and processed successfully for UUID 7fd4e9c9-042b-4fce-bede-1b55bb906abd.
+2024-10-24 06:09:46,033 - INFO - Files listed successfully for UUID 7fd4e9c9-042b-4fce-bede-1b55bb906abd.
+2024-10-24 06:11:13,079 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-10-24 06:11:16,613 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-10-24 06:31:00,063 - INFO - Generating Documents
+2024-10-24 06:31:06,767 - INFO - Cleaning Documents
+2024-10-24 06:31:07,248 - INFO - Documents Generated Successfully
+2024-10-24 06:31:07,250 - INFO - file name : Microsoft Word - file0
+2024-10-24 06:31:13,235 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-10-24 06:31:23,494 - INFO - File Microsoft Word - file0 uploaded and processed successfully for UUID 7fd4e9c9-042b-4fce-bede-1b55bb906abd.
+2024-10-24 06:32:10,245 - INFO - Files listed successfully for UUID 7fd4e9c9-042b-4fce-bede-1b55bb906abd.
+2024-10-24 06:32:49,535 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-10-24 06:32:54,885 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"

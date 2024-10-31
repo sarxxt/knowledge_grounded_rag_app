@@ -1,4 +1,0 @@
-streamlit==1.28.1
-streamlit-chat==0.1.1
-streamlit-extras==0.3.5
-python-dotenv==1.0.0
