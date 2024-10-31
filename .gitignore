@@ -22,7 +22,8 @@ venv
 new-venv
 docs.zip
 archive.zip
-
+volumes
+volumes/.
 # vim temporary files
 *~
 .*.sw?
