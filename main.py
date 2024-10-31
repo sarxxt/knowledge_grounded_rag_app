@@ -39,7 +39,7 @@ app.add_middleware(
 # embedding_model = EmbeddingModel()
 document_generator = DocumentGenerator()
         # Initialize OpenAI embeddings via LangChain
-OPENAI_API_KEY = "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"
+OPENAI_API_KEY = ''
 llm = ChatOpenAI(model_name='gpt-4o-mini',temperature=0.4, openai_api_key=OPENAI_API_KEY)
 openai_embeddings = OpenAIEmbeddings(openai_api_key=OPENAI_API_KEY)
 # embeddings.embed_documents(texts)
